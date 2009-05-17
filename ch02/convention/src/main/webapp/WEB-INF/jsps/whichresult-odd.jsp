@@ -4,8 +4,8 @@
   <head>
     <title>Odd!</title>
   </head>
-  
+
   <body>
-    <h1><s:property value="ctm"/> is odd!</h1>
+    <h1><s:property value="ctm" /> is odd!</h1>
   </body>
 </html>
