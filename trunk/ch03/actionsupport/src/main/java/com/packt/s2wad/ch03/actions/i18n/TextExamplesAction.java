@@ -1,18 +1,18 @@
 package com.packt.s2wad.ch03.actions.i18n;
 
+import java.util.ArrayList;
+
 import com.opensymphony.xwork2.ActionSupport;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 
-import java.util.ArrayList;
-
 public class TextExamplesAction extends ActionSupport implements TextInterface {
 
-    private static Log log = LogFactory.getLog(TextExamplesAction.class);
+    private static final Log LOG = LogFactory.getLog(TextExamplesAction.class);
 
     @Override
     public String execute() throws Exception {
-        log.debug(getText("from.class.props"));
+        LOG.debug(getText("from.class.props"));
         return SUCCESS;
     }
 
@@ -27,7 +27,12 @@ public class TextExamplesAction extends ActionSupport implements TextInterface {
         }});
     }
 
-    public String getFoo() { return "Fooo!"; }
-    public String getBar() { return "Baar!"; }
+    public String getFoo() {
+        return "Fooo!";
+    }
+
+    public String getBar() {
+        return "Baar!";
+    }
 
 }

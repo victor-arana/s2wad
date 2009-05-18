@@ -1,25 +1,23 @@
 package com.packt.s2wad.ch03.models;
 
 public class Recipe {
-    public Integer id;
-    public String name;
-    public String description;
-    public String ingredients;
-    public String directions;
+
+    private Integer id;
+    private String name;
+    private String description;
+    private String ingredients;
+    private String directions;
 
     @Override
     public String toString() {
-        return "Recipe{" + super.toString() + "--" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                ", description='" + description + '\'' +
-                ", ingredients='" + ingredients + '\'' +
-                ", directions='" + directions + '\'' +
-                '}';
+        String s = super.toString();
+        String addr = s.substring(s.lastIndexOf('@') + 1);
+        return String.format("Recipe@%s [id=%d, name='%s']",
+                             addr, this.id, this.name);
     }
 
     //~ Accessors
-    
+
     public Integer getId() {
         return id;
     }

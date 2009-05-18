@@ -2,17 +2,18 @@ package com.packt.s2wad.ch03.actions.recipes;
 
 import com.opensymphony.xwork2.ActionSupport;
 import com.packt.s2wad.ch03.models.Recipe;
+import org.apache.commons.lang.StringUtils;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
-import org.apache.commons.lang.StringUtils;
 
 public class NewRecipe extends ActionSupport {
+
     private Recipe recipe;
-    private static Log log = LogFactory.getLog(NewRecipe.class);
+    private static final Log LOG = LogFactory.getLog(NewRecipe.class);
 
     @Override
     public String execute() throws Exception {
-        log.debug(recipe);
+        LOG.debug(recipe);
         return SUCCESS;
     }
 
@@ -34,4 +35,5 @@ public class NewRecipe extends ActionSupport {
     public void setRecipe(Recipe recipe) {
         this.recipe = recipe;
     }
+
 }
