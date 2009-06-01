@@ -8,6 +8,7 @@
 
   <body>
     <h1>Property Tag Examples</h1>
+    <h2>See <span class="code">com.packt.s2wad.ch05.actions.examples.PropertyTagAction</span></h2>
 
     <dl>
       <dt>Property with HTML, default <span class="code">escape (true)</span>:</dt>

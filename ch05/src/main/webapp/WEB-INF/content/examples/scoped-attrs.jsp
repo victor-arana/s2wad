@@ -3,31 +3,15 @@
 <html>
   <head>
     <title>Scoped Attributes Examples</title>
-    <style type="text/css">
-      body {
-        font-family: sans-serif;
-      }
-      
-      dt {
-        font-weight: bold;
-      }
-
-      dd {
-        padding-bottom: 0.5em;
-      }
-      
-      .code {
-        font-family: monospace;
-        color: darkblue;
-      }
-    </style>
+    <link type="text/css" rel="stylesheet" href="<s:url value='/css/main.css'/>"/>
   </head>
 
   <body>
-    <h1>Property Tag Examples</h1>
+    <h1>Scoped Attributes Examples</h1>
+    <h2>See <span class="code">com.packt.s2wad.ch05.actions.examples.ScopedAttrsAction</span></h2>
 
     <dl>
-      <dt>Accessing directly from scope:</dt>
+      <dt>Accessing directly from specific scope:</dt>
       <dd>
         <table>
           <tr>
