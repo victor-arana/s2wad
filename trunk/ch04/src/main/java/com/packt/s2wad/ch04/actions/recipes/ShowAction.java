@@ -3,7 +3,6 @@ package com.packt.s2wad.ch04.actions.recipes;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.apache.struts2.convention.annotation.Action;
-import org.apache.struts2.convention.annotation.Result;
 
 import com.opensymphony.xwork2.ActionSupport;
 import com.packt.s2wad.ch04.models.Recipe;
@@ -14,13 +13,15 @@ public class ShowAction extends ActionSupport {
 
     private Recipe recipe;
     private RecipeService recipeService = new FakeRecipeService();
-    private static Log log = LogFactory.getLog(ShowAction.class);
+    private static final Log LOG = LogFactory.getLog(ShowAction.class);
 
     @Override
     public String execute() throws Exception {
-        log.debug(String.format("Enter: recipe.id=%s.", recipe.getId()));
+        LOG.debug(String.format("Enter: recipe.id=%s.", recipe.getId()));
+
         recipe = recipeService.findById(recipe.getId());
-        log.debug(recipe);
+        LOG.debug(recipe == null ? "  null recipe" : recipe);
+
         return recipe != null ? SUCCESS : "notfound";
     }
 
