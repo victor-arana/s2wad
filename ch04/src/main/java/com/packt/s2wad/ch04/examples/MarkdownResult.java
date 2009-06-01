@@ -8,6 +8,8 @@ import javax.servlet.ServletContext;
 import javax.servlet.http.HttpServletResponse;
 
 import org.apache.commons.io.FileUtils;
+import org.apache.commons.logging.LogFactory;
+import org.apache.commons.logging.Log;
 import org.apache.struts2.ServletActionContext;
 import org.apache.struts2.StrutsStatics;
 import org.apache.struts2.dispatcher.StrutsResultSupport;
@@ -19,6 +21,8 @@ import com.petebevin.markdown.MarkdownProcessor;
 public class MarkdownResult extends StrutsResultSupport {
 
     private String defaultEncoding = "ISO-8859-1";
+
+    private static final Log LOG = LogFactory.getLog(MarkdownResult.class);
 
     public void doExecute(final String finalLocation,
                           final ActionInvocation invocation)
@@ -32,7 +36,7 @@ public class MarkdownResult extends StrutsResultSupport {
         String markdown = p.markdown(markdownInput);
 
         ActionContext actionContext = invocation.getInvocationContext();
-        HttpServletResponse response = (HttpServletResponse) actionContext.get(StrutsStatics.HTTP_RESPONSE);
+        HttpServletResponse response = ServletActionContext.getResponse();
         byte[] markdownBytes = markdown.getBytes(defaultEncoding);
         response.setContentLength(markdownBytes.length);
         response.setContentType("text/html;charset=" + this.defaultEncoding);
@@ -41,8 +45,7 @@ public class MarkdownResult extends StrutsResultSupport {
         out.print(markdown);
     }
 
-    private String readFromContextPath(ActionInvocation invocation,
-                                       String finalLocation) {
+    private String readFromContextPath(ActionInvocation invocation, String finalLocation) {
         ServletContext servletContext = ServletActionContext.getServletContext();
         File inFile = new File(servletContext.getRealPath(finalLocation));
         if (!inFile.exists()) {
@@ -53,9 +56,10 @@ public class MarkdownResult extends StrutsResultSupport {
         try {
             return FileUtils.readFileToString(inFile, defaultEncoding);
         } catch (IOException e) {
-            e.printStackTrace();
+            LOG.error(e);
         }
 
         return "";
     }
+
 }
