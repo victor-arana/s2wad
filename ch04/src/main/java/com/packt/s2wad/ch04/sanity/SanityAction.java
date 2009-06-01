@@ -6,13 +6,13 @@ import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 
 public class SanityAction extends ActionSupport {
-  
+
     private String sanityCheck = "Sanity check string from SanityAction";
-    private Log log = LogFactory.getLog(SanityAction.class);
-    
+    private static final Log LOG = LogFactory.getLog(SanityAction.class);
+
     public String getSanityCheck() {
-        log.debug("Enter.");
+        LOG.debug("Enter.");
         return sanityCheck;
     }
-    
+
 }
