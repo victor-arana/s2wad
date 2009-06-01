@@ -12,6 +12,12 @@ public class Recipe {
         // Default ctor.
     }
 
+    public Recipe(Integer id, String name, String description) {
+        this.id = id;
+        this.name = name;
+        this.description = description;
+    }
+
     public Recipe(Integer id, String name, String description, String ingredients, String directions) {
         this.id = id;
         this.name = name;
