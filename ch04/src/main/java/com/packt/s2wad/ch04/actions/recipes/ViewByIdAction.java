@@ -11,18 +11,18 @@ import com.packt.s2wad.ch04.models.Recipe;
 public class ViewByIdAction extends ActionSupport {
 
     private Recipe recipe;
-    private static Log log = LogFactory.getLog(ViewByIdAction.class);
+    private static final Log LOG = LogFactory.getLog(ViewByIdAction.class);
 
     @Action(value = "view-by-id-process",
             results = {
                 @Result(name = SUCCESS,
                         type = "redirectAction",
                         location = "show",
-                        params = {"recipe.id", "%{recipe.id}"}),
+                        params = { "recipe.id", "%{recipe.id}" }),
                 @Result(name = INPUT, location = "/WEB-INF/content/recipes/view-by-id.jsp")
             })
     public String process() {
-        log.debug(String.format("Enter: recipe.id=%d.", recipe.getId()));
+        LOG.debug(String.format("Enter: recipe.id=%d.", recipe.getId()));
         return SUCCESS;
     }
 

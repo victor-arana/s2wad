@@ -27,5 +27,11 @@
       <li><a href="<s:url action='redirect-action-result-annotation-example' namespace='/annotations'/>">Annotation config, redirectAction</a></li>
       <li><a href="<s:url action='nsresult' namespace='/annotations'/>">Annotation configuration, create non-default mapping for action method</a></li>
     </ul>
+
+    <h2>RecipeBox</h2>
+
+    <ul>
+      <li><a href="<s:url action='view-by-id' namespace='/recipes'/>">View Recipe by ID</a></li>
+    </ul>
   </body>
 </html>
