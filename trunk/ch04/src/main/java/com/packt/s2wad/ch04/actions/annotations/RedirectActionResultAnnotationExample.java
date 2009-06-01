@@ -1,4 +1,4 @@
-package com.packt.s2wad.ch04.examples;
+package com.packt.s2wad.ch04.actions.annotations;
 
 import org.apache.struts2.convention.annotation.Result;
 import org.apache.struts2.convention.annotation.Results;
@@ -11,9 +11,9 @@ import com.opensymphony.xwork2.ActionSupport;
             location = "dispatch-result-example"),
     @Result(name = "ns", type = "redirectAction",
             location = "sanity",
-            params = {"namespace", "/"})
+            params = { "namespace", "/" })
 })
-public class RedirectActionResultExample extends ActionSupport {
+public class RedirectActionResultAnnotationExample extends ActionSupport {
     @Action("nsresult")
     public String useNamespacedResult() {
         return "ns";
