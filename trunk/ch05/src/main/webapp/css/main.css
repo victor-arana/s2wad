@@ -1,0 +1,16 @@
+body {
+  font-family: sans-serif;
+}
+
+dt {
+  font-weight: bold;
+}
+
+dd {
+  padding-bottom: 0.5em;
+}
+
+.code {
+  font-family: monospace;
+  color: darkblue;
+}

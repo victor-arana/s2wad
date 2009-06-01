@@ -3,24 +3,7 @@
 <html>
   <head>
     <title>Property Tag Examples</title>
-    <style type="text/css">
-      body {
-        font-family: sans-serif;
-      }
-      
-      dt {
-        font-weight: bold;
-      }
-
-      dd {
-        padding-bottom: 0.5em;
-      }
-      
-      .code {
-        font-family: monospace;
-        color: darkblue;
-      }
-    </style>
+    <link type="text/css" rel="stylesheet" href="<s:url value='/css/main.css'/>"/>
   </head>
 
   <body>
