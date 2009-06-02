@@ -28,3 +28,7 @@ th {
 td {
   padding: 0.25em;
 }
+
+input, textarea {
+  border: 1px solid slategray;
+}
