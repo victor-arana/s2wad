@@ -12,7 +12,8 @@ import org.apache.struts2.convention.annotation.Results;
         @Result(name = ActionSupport.INPUT,
                 location = "/WEB-INF/content/examples/message-games.jsp"),
         @Result(name = ActionSupport.SUCCESS,
-                location = "/WEB-INF/content/examples/message-games.jsp")
+                type = "redirectAction",
+                location = "message-games")
 })
 public class MessageGamesAction extends ActionSupport {
 
