@@ -10,6 +10,7 @@ import com.packt.s2wad.ch07.services.FakeRecipeTypeService;
 import com.packt.s2wad.ch07.services.RecipeTypeService;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
+import org.apache.commons.lang.StringUtils;
 import org.apache.struts2.convention.annotation.Action;
 import org.apache.struts2.convention.annotation.Result;
 import org.apache.struts2.convention.annotation.Results;
@@ -40,6 +41,16 @@ public class NewRecipeAction extends ActionSupport implements Preparable {
     public String process() {
         LOG.debug("Enter: " + recipe);
         return "thanks";
+    }
+
+    @Override
+    public void validate() {
+        if (StringUtils.isBlank(recipe.getName())) {
+            addFieldError("recipe.name", getText("recipe.name.required"));
+        }
+        if (StringUtils.isBlank(recipe.getIngredients())) {
+            addFieldError("recipe.ingredients", getText("recipe.ingredients.required"));
+        }
     }
 
     public void prepare() throws Exception {
