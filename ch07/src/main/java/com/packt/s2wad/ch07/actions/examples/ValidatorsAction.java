@@ -24,6 +24,7 @@ public class ValidatorsAction extends ActionSupport {
     private Double reqDouble;
 
     private String email;
+    private String cemail;
     private String url;
 
     private Date date;
@@ -35,13 +36,13 @@ public class ValidatorsAction extends ActionSupport {
     @Override
     @Action(value = "validators")
     public String input() throws Exception {
-        LOG.debug("Enter.");
+        LOG.debug("Enter: " + this);
         return INPUT;
     }
 
     @Action(value = "validators-process")
     public String process() {
-        LOG.debug("Enter.");
+        LOG.debug("Enter: " + this);
         return SUCCESS;
     }
 
@@ -53,6 +54,7 @@ public class ValidatorsAction extends ActionSupport {
                ", reqd=" + reqd +
                ", reqDouble=" + reqDouble +
                ", email='" + email + '\'' +
+               ", cemail='" + cemail + '\'' +
                ", url='" + url + '\'' +
                ", date=" + date +
                ", arbitraryRegex='" + arbitraryRegex + '\'' +
@@ -123,5 +125,13 @@ public class ValidatorsAction extends ActionSupport {
 
     public void setArbitraryRegex(String arbitraryRegex) {
         this.arbitraryRegex = arbitraryRegex;
+    }
+
+    public String getCemail() {
+        return cemail;
+    }
+
+    public void setCemail(String cemail) {
+        this.cemail = cemail;
     }
 }

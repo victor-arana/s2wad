@@ -12,6 +12,8 @@
 
     <h2>See <span class="code">c.p.s.ch07.actions.examples.ValidatorsAction</span></h2>
 
+    <s:actionerror/>
+
     <s:form action="validators-process">
       <s:textfield key="reqint"/>
       <s:textfield key="reqInteger"/>
@@ -20,6 +22,8 @@
       <s:textfield key="reqDouble"/>
 
       <s:textfield key="email"/>
+      <s:textfield key="cemail"/>
+      
       <s:textfield key="url"/>
       <s:textfield key="date"/>
       <s:textfield key="arbitraryRegex"/>
