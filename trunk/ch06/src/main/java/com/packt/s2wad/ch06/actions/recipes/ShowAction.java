@@ -2,8 +2,6 @@ package com.packt.s2wad.ch06.actions.recipes;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
-import org.apache.struts2.convention.annotation.Action;
-import org.apache.struts2.convention.annotation.Result;
 
 import com.opensymphony.xwork2.ActionSupport;
 import com.packt.s2wad.ch06.models.Recipe;
@@ -14,24 +12,15 @@ public class ShowAction extends ActionSupport {
 
     private Recipe recipe;
     private RecipeService recipeService = new FakeRecipeService();
-    private static Log log = LogFactory.getLog(ShowAction.class);
+    private static final Log LOG = LogFactory.getLog(ShowAction.class);
 
     @Override
     public String execute() throws Exception {
-        log.debug(String.format("Enter: recipe.id=%s.", recipe.getId()));
+        LOG.debug(String.format("Enter: recipe.id=%s.", recipe.getId()));
         recipe = recipeService.findById(recipe.getId());
-        log.debug(recipe);
-        return recipe != null ? SUCCESS : "notfound";
+        LOG.debug(recipe);
+        return recipe.getId() != 0 ? SUCCESS : "notfound";
     }
-
-    @Action(value = "fmshow")
-    public String fmshow() throws Exception {
-        return execute();
-    }
-
-    private String pageTitle;
-    private String pageHeader;
-    private String descriptionHeader;
 
     //~ Accessors
 
@@ -49,30 +38,6 @@ public class ShowAction extends ActionSupport {
 
     public void setRecipeService(RecipeService recipeService) {
         this.recipeService = recipeService;
-    }
-
-    public String getPageTitle() {
-        return pageTitle;
-    }
-
-    public void setPageTitle(String pageTitle) {
-        this.pageTitle = pageTitle;
-    }
-
-    public String getPageHeader() {
-        return pageHeader;
-    }
-
-    public void setPageHeader(String pageHeader) {
-        this.pageHeader = pageHeader;
-    }
-
-    public String getDescriptionHeader() {
-        return descriptionHeader;
-    }
-
-    public void setDescriptionHeader(String descriptionHeader) {
-        this.descriptionHeader = descriptionHeader;
     }
 
 }

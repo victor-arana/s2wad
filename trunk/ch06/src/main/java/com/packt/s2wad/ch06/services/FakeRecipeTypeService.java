@@ -4,12 +4,11 @@ import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
 
-import com.packt.s2wad.ch06.models.RecipeTypeService;
 import com.packt.s2wad.ch06.models.RecipeType;
 
 @SuppressWarnings("serial")
 public class FakeRecipeTypeService implements RecipeTypeService {
-    
+
     public static final RecipeType RECIPE_TYPE1 = new RecipeType(1, "Appetizer");
     public static final RecipeType RECIPE_TYPE2 = new RecipeType(2, "Main Dish");
     public static final RecipeType RECIPE_TYPE3 = new RecipeType(3, "Dessert");
@@ -23,7 +22,7 @@ public class FakeRecipeTypeService implements RecipeTypeService {
         put(3, RECIPE_TYPE3);
         put(4, RECIPE_TYPE4);
     }};
-    
+
     public Collection<RecipeType> getAll() {
         return recipeTypes.values();
     }
@@ -32,7 +31,7 @@ public class FakeRecipeTypeService implements RecipeTypeService {
         if (recipeTypes.containsKey(id_)) {
             return recipeTypes.get(id_);
         }
-        
+
         return NO_RECIPETYPE;
     }
 
