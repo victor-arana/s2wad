@@ -3,34 +3,18 @@
 <html>
   <head>
     <title>Dirty OGNL Secrets</title>
-    <style type="text/css">
-      body {
-        font-family: sans-serif;
-      }
-
-      h1 {
-        font-size: 1.2em;
-      }
-
-      dt {
-        font-weight: bold;
-      }
-
-      dd {
-        padding-bottom: 0.5em;
-      }
-    </style>
+    <link type="text/css" rel="stylesheet" href="<s:url value='/css/main.css'/>" />
   </head>
 
   <body>
     <s:generator separator="," val="%{'a, b, c, d, e, f'}"
-                 var="letters"/>
+                 var="letters" />
     <s:iterator value='%{#letters.{?#this.matches("[aeiou]")}}'>
-      <s:property/>
+      <s:property />
     </s:iterator>
-    <hr/>
+    <hr />
     <s:iterator value="{1,'a',4.5}.{class.name}">
-      <s:property/>&nbsp;
+      <s:property />&nbsp;
     </s:iterator>
   </body>
 </html>
