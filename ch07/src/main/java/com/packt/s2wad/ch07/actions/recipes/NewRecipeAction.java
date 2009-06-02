@@ -43,16 +43,6 @@ public class NewRecipeAction extends ActionSupport implements Preparable {
         return "thanks";
     }
 
-    @Override
-    public void validate() {
-        if (StringUtils.isBlank(recipe.getName())) {
-            addFieldError("recipe.name", getText("recipe.name.required"));
-        }
-        if (StringUtils.isBlank(recipe.getIngredients())) {
-            addFieldError("recipe.ingredients", getText("recipe.ingredients.required"));
-        }
-    }
-
     public void prepare() throws Exception {
         recipeTypeOptions = recipeTypeService.getAll();
     }

@@ -1,0 +1,16 @@
+<!DOCTYPE validators PUBLIC
+    "-//OpenSymphony Group//XWork Validator 1.0.2//EN"
+    "http://www.opensymphony.com/xwork/xwork-validator-1.0.2.dtd">
+
+<validators>
+  <validator type="requiredstring">
+    <param name="fieldName">recipe.name</param>
+    <message>Recipe name is required.</message>
+  </validator>
+
+  <field name="recipe.ingredients">
+    <field-validator type="requiredstring">
+      <message>Recipe ingredients are required.</message>
+    </field-validator>
+  </field>
+</validators>
