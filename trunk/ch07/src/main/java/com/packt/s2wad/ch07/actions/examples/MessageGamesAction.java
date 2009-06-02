@@ -18,6 +18,7 @@ import org.apache.struts2.convention.annotation.Results;
 public class MessageGamesAction extends ActionSupport {
 
     private String name;
+    private String showMinOrMax;
 
     private static final Log LOG = LogFactory.getLog(MessageGamesAction.class);
 
@@ -34,12 +35,30 @@ public class MessageGamesAction extends ActionSupport {
         return SUCCESS;
     }
 
+    @Override
+    public String toString() {
+        return "MessageGamesAction{" +
+               "name='" + name + '\'' +
+               ", showMinOrMax='" + showMinOrMax + '\'' +
+               '}';
+    }
+
+    //~ Accessors
+
     public String getName() {
         return name;
     }
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public String getShowMinOrMax() {
+        return showMinOrMax;
+    }
+
+    public void setShowMinOrMax(String showMinOrMax) {
+        this.showMinOrMax = showMinOrMax;
     }
 
 }

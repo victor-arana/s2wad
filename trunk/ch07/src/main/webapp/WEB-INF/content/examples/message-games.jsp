@@ -13,6 +13,7 @@
 
     <s:form action="message-games-process">
       <s:textfield key="name" />
+      <s:textfield key="showMinOrMax" />
       <s:submit />
     </s:form>
   </body>
