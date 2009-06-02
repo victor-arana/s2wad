@@ -2,21 +2,12 @@
 
 <head>
   <title>OGNL String Gotcha</title>
-  <style type="text/css">
-    body {
-      font-family: sans-serif;
-    }
-    dt {
-      font-weight: bold;
-    }
-    dd {
-      padding-bottom: 0.5em;
-    }
-  </style>
+  <link type="text/css" rel="stylesheet" href="<s:url value='/css/main.css'/>"/>
 </head>
 
 <body>
   <h1>OGNL String Gotcha</h1>
+  <h2>See <span class="code">com.packt.s2wad.actions.examples.OgnlStringGotchaAction</span></h2>
 
   <dl>
     <dt>Test against single-quoted 'A' fails:</dt>

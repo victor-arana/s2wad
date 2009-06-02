@@ -7,10 +7,15 @@
 
   <body>
     <h1>Chapter 5: OGNL!</h1>
-    
+
     <ul>
       <li><a href="<s:url action='property-tag' namespace='/examples'/>">Property Tag Examples</a></li>
       <li><a href="<s:url action='scoped-attrs' namespace='/examples'/>">Scoped Attribute Examples</a></li>
+      <li><a href="<s:url action='static-util' namespace='/examples'/>">OGNL static method access</a></li>
+      <li><a href="<s:url action='conditionals' namespace='/examples'/>">OGNL conditionals</a></li>
+      <li><a href="<s:url action='ognl-string-gotcha' namespace='/examples'/>">OGNL String comparison <strong>gotcha!</strong></a></li>
+      <li><a href="<s:url action='iterator-tag' namespace='/examples'/>">Iterator tag</a></li>
+      <li><a href="<s:url action='list-styling' namespace='/examples'/>">List Styling CSS Detour</a></li>
     </ul>
   </body>
 </html>
