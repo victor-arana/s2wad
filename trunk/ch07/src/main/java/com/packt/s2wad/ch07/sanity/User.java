@@ -1,25 +1,16 @@
-package com.packt.s2wad.ch06.models;
+package com.packt.s2wad.ch07.sanity;
 
-public class RecipeType {
-
+/**
+ * TODO Document.
+ */
+public class User {
     private Integer id;
     private String name;
 
-    public RecipeType() {
-        // Does nothing.
-    }
-
-    public RecipeType(Integer id, String name) {
+    public User(Integer id, String name) {
         this.id = id;
         this.name = name;
     }
-
-    @Override
-    public String toString() {
-        return String.format("%s [id=%d, name=%s]", super.toString(), id, name);
-    }
-
-    //~ Accessors
 
     public Integer getId() {
         return id;
@@ -36,5 +27,4 @@ public class RecipeType {
     public void setName(String name) {
         this.name = name;
     }
-
 }

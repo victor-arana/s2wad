@@ -1,13 +1,13 @@
-package com.packt.s2wad.ch06.actions.recipes;
+package com.packt.s2wad.ch07.actions.recipes;
 
 import java.util.Collection;
 
 import com.opensymphony.xwork2.ActionSupport;
 import com.opensymphony.xwork2.Preparable;
-import com.packt.s2wad.ch06.models.Recipe;
-import com.packt.s2wad.ch06.models.RecipeType;
-import com.packt.s2wad.ch06.services.FakeRecipeTypeService;
-import com.packt.s2wad.ch06.services.RecipeTypeService;
+import com.packt.s2wad.ch07.models.Recipe;
+import com.packt.s2wad.ch07.models.RecipeType;
+import com.packt.s2wad.ch07.services.FakeRecipeTypeService;
+import com.packt.s2wad.ch07.services.RecipeTypeService;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.apache.struts2.convention.annotation.Action;

@@ -1,4 +1,4 @@
-package com.packt.s2wad.ch06.models;
+package com.packt.s2wad.ch07.models;
 
 import java.util.List;
 

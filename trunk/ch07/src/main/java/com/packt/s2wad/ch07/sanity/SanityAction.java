@@ -1,4 +1,4 @@
-package com.packt.s2wad.ch06.sanity;
+package com.packt.s2wad.ch07.sanity;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
@@ -11,12 +11,12 @@ public class SanityAction extends ActionSupport {
     private String foo2;
     private String sanityCheck = "Sanity check string from SanityAction";
     private Log log = LogFactory.getLog(SanityAction.class);
-    
+
     public String getSanityCheck() {
         log.debug("Enter.");
         return sanityCheck;
     }
-    
+
     public String getFoo() {
         return foo;
     }

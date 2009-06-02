@@ -1,4 +1,4 @@
-package com.packt.s2wad.ch06.sanity;
+package com.packt.s2wad.ch07.sanity;
 
 /**
  * TODO Document.
@@ -20,7 +20,7 @@ public class UserAccessException extends RuntimeException {
 
     private User user;
     private Reason reason;
-    
+
     public UserAccessException(User user, Reason reason) {
         this.user = user;
         this.reason = reason;
