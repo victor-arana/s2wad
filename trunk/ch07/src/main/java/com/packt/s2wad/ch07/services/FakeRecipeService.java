@@ -16,18 +16,20 @@ public class FakeRecipeService implements RecipeService {
         Recipe r;
 
         r = new Recipe(1,"Spicy Lentil Pot",
+                       // Ingredients
                        "A spicy lentil-vegetable soup",
                        "1/2 cup - dry lentils\n" +
                        "2 - large carrots\n" +
                        "1 - red onion",
+                       // Directions
                        "Mix it all up and cook!");
+
         r.setRecipeTypes(new ArrayList<RecipeType>() {{
             add(new RecipeType(1, "Test Type"));
             add(new RecipeType(2, "Another type"));
         }});
 
         put(1, r);
-
     }};
 
     public Collection<Recipe> findAll() {
