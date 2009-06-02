@@ -19,6 +19,9 @@
       <li><a href="<s:url action='list-styling' namespace='/examples'/>">List Styling CSS Detour</a></li>
       <li><a href="<s:url action='generator-tag' namespace='/examples'/>">Generator tag</a></li>
       <li><a href="<s:url action='generator-converter' namespace='/examples'/>">Generator Converter Example</a></li>
+      <li><a href="<s:url action='other-col-tags' namespace='/examples'/>">Other collection tags</a></li>
+      <li><a href="<s:url action='subset-filter' namespace='/examples'/>">Subset Filtering Example</a></li>
+      <li><a href="<s:url action='dirty-ognl-secrets' namespace='/examples'/>">Dirty OGNL Secrets</a></li>
     </ul>
   </body>
 </html>
