@@ -15,6 +15,12 @@ public class Recipe {
         // Default ctor.
     }
 
+    public Recipe(Integer id, String name, String description) {
+        this.id = id;
+        this.name = name;
+        this.description = description;
+    }
+
     public Recipe(Integer id, String name, String description, String ingredients, String directions) {
         this.id = id;
         this.name = name;
@@ -26,12 +32,12 @@ public class Recipe {
     @Override
     public String toString() {
         return "Recipe{" + super.toString() + "--" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                ", description='" + description + '\'' +
-                ", ingredients='" + ingredients + '\'' +
-                ", directions='" + directions + '\'' +
-                '}';
+               "id=" + id +
+               ", name='" + name + '\'' +
+               ", description='" + description + '\'' +
+               ", ingredients='" + ingredients + '\'' +
+               ", directions='" + directions + '\'' +
+               '}';
     }
 
     //~ Accessors

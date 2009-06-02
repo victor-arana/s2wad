@@ -9,7 +9,9 @@ import com.packt.s2wad.ch06.models.Recipe;
 import com.packt.s2wad.ch06.models.RecipeType;
 
 public class FakeRecipeService implements RecipeService {
-    
+
+    public static Recipe NO_RECIPE = new Recipe(0, "Not Found", "Recipe not found");
+
     private static Map<Integer, Recipe> recipes = new LinkedHashMap<Integer, Recipe>() {{
         Recipe r;
 
@@ -33,7 +35,10 @@ public class FakeRecipeService implements RecipeService {
     }
 
     public Recipe findById(Integer id) {
-        return recipes.get(id);
+        if (recipes.containsKey(id)) {
+            return recipes.get(id);
+        }
+        return NO_RECIPE;
     }
 
 }
