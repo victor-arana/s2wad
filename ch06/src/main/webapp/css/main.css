@@ -29,6 +29,6 @@ td {
   padding: 0.25em;
 }
 
-input, textarea {
+input, textarea, select {
   border: 1px solid slategray;
 }
