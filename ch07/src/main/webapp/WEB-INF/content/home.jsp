@@ -10,6 +10,7 @@
     <h1>Validation and Conversion</h1>
 
     <ul>
+      <li><a href="<s:url action='new-recipe' namespace='/recipes'/>">New Recipe</a></li>
     </ul>
   </body>
 </html>
