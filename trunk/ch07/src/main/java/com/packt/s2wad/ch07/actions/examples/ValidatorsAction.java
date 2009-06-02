@@ -3,7 +3,7 @@ package com.packt.s2wad.ch07.actions.examples;
 import java.util.Date;
 
 import com.opensymphony.xwork2.ActionSupport;
-import com.packt.s2wad.ch07.services.EmailService;
+import com.packt.s2wad.ch07.examples.EmailService;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.apache.struts2.convention.annotation.Action;
