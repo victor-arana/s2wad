@@ -1,4 +1,4 @@
-package com.packt.s2wad.ch06.sanity;
+package com.packt.s2wad.ch07.sanity;
 
 import com.opensymphony.xwork2.ActionSupport;
 

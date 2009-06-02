@@ -1,12 +1,12 @@
-package com.packt.s2wad.ch06.services;
+package com.packt.s2wad.ch07.services;
 
 import java.util.Map;
 import java.util.LinkedHashMap;
 import java.util.ArrayList;
 import java.util.Collection;
 
-import com.packt.s2wad.ch06.models.Recipe;
-import com.packt.s2wad.ch06.models.RecipeType;
+import com.packt.s2wad.ch07.models.Recipe;
+import com.packt.s2wad.ch07.models.RecipeType;
 
 public class FakeRecipeService implements RecipeService {
 

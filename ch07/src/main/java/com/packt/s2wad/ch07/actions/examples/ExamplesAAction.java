@@ -1,4 +1,4 @@
-package com.packt.s2wad.ch06.actions.examples;
+package com.packt.s2wad.ch07.actions.examples;
 
 import java.util.List;
 import java.util.ArrayList;
