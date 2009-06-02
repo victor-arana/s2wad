@@ -3,6 +3,7 @@ package com.packt.s2wad.ch07.actions.examples;
 import java.util.Date;
 
 import com.opensymphony.xwork2.ActionSupport;
+import com.packt.s2wad.ch07.services.EmailService;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.apache.struts2.convention.annotation.Action;
@@ -31,6 +32,8 @@ public class ValidatorsAction extends ActionSupport {
 
     private String arbitraryRegex;
 
+    private EmailService emailService = new EmailService();
+
     private static final Log LOG = LogFactory.getLog(ValidatorsAction.class);
 
     @Override
@@ -44,6 +47,14 @@ public class ValidatorsAction extends ActionSupport {
     public String process() {
         LOG.debug("Enter: " + this);
         return SUCCESS;
+    }
+
+    @Override
+    public void validate() {
+        super.validate();
+        if (email.contains("bar")) {
+            addFieldError("email", "Email excluded by validate() method.");
+        }
     }
 
     @Override
@@ -134,4 +145,13 @@ public class ValidatorsAction extends ActionSupport {
     public void setCemail(String cemail) {
         this.cemail = cemail;
     }
+
+    public EmailService getEmailService() {
+        return emailService;
+    }
+
+    public void setEmailService(EmailService emailService) {
+        this.emailService = emailService;
+    }
+
 }

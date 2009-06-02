@@ -34,7 +34,7 @@
 
     <field-validator type="double">
       <param name="minInclusive">10</param>
-      <param name="maxExclusive">20</param>
+      <param name="maxInclusive">20</param>
       <message>'double' must be between %{minInclusive} and %{maxInclusive} (inclusive).</message>
     </field-validator>
   </field>
@@ -46,7 +46,7 @@
 
     <field-validator type="double">
       <param name="minInclusive">10</param>
-      <param name="maxExclusive">20</param>
+      <param name="maxInclusive">20</param>
       <message>'Double' must be between %{minInclusive} and %{maxInclusive} (inclusive).</message>
     </field-validator>
   </field>
@@ -63,6 +63,11 @@
     <field-validator type="fieldexpression">
       <param name="expression">!email.startsWith('dave')</param>
       <message>No daves!</message>
+    </field-validator>
+
+    <field-validator type="fieldexpression">
+      <param name="expression">!emailService.excluded(email)</param>
+      <message>Email excluded by service fieldexpression</message>
     </field-validator>
   </field>
 
