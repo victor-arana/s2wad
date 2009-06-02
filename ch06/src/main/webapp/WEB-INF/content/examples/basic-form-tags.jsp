@@ -15,6 +15,9 @@
       <s:password key="password"/>
       <s:hidden key="hiddenField"/>
       <s:textarea key="directions" rows="5" cols="60"/>
+      <s:label name="labelField" label="%{getText('labelField')}"/>
+      <s:radio key="gender" list="genderOptions"/>
+      <s:radio key="myCoolBean" list="coolBeans" listKey="id" listValue="text"/>
       <s:submit/>
     </s:form>
   </body>

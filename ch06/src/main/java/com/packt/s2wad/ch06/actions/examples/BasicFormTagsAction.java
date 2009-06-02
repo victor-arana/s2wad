@@ -1,10 +1,18 @@
 package com.packt.s2wad.ch06.actions.examples;
 
+import java.util.List;
+import java.util.Arrays;
+
 import com.opensymphony.xwork2.ActionSupport;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.apache.struts2.convention.annotation.Action;
 import org.apache.struts2.convention.annotation.Result;
+import org.apache.struts2.convention.annotation.Results;
+
+@Results(
+        @Result(name = ActionSupport.INPUT,
+                location = "/WEB-INF/content/examples/basic-form-tags.jsp"))
 
 public class BasicFormTagsAction extends ActionSupport {
 
@@ -12,19 +20,40 @@ public class BasicFormTagsAction extends ActionSupport {
     private String password;
     private String hiddenField;
     private String directions;
+    private String labelField = "Display-only label field";
+    private String gender;
+    private String myCoolBean;
 
     private static final Log LOG = LogFactory.getLog(BasicFormTagsAction.class);
+
+    @Action(value = "basic-form-tags")
+    @Override
+    public String input() throws Exception {
+        LOG.debug(this);
+        return INPUT;
+    }
 
     @Action(value = "basic-form-tags-process",
             results = {
                     @Result(name = SUCCESS,
                             type = "redirectAction",
-                            location = "basic-form-tags"),
-                    @Result(name = INPUT, location = "/WEB-INF/content/examples/basic-form-tags.jsp")
+                            location = "basic-form-tags")
             })
     public String process() {
         LOG.debug(this);
         return SUCCESS;
+    }
+
+    public List<String> getGenderOptions() {
+        return Arrays.asList(new String[] { "Male", "Female", "Other" });
+    }
+
+    public List<CoolBean> getCoolBeans() {
+        return Arrays.asList(new CoolBean[] {
+                cb("id-1", "One"),
+                cb("id-2", "Twoooo"),
+                cb("id-3", "Thwee")
+        });
     }
 
     @Override
@@ -34,7 +63,23 @@ public class BasicFormTagsAction extends ActionSupport {
                ", password='" + password + '\'' +
                ", hiddenField='" + hiddenField + '\'' +
                ", directions='" + directions + '\'' +
+               ", labelField='" + labelField + '\'' +
+               ", gender='" + gender + '\'' +
+               ", myCoolBean='" + myCoolBean + '\'' +
                '}';
+    }
+
+    private CoolBean cb(String id, String text) {
+        return new CoolBean(id, text);
+    }
+
+    class CoolBean {
+        public String id;
+        public String text;
+        public CoolBean(String id, String text) {
+            this.id = id;
+            this.text = text;
+        }
     }
 
     //~ Accessors
@@ -71,4 +116,27 @@ public class BasicFormTagsAction extends ActionSupport {
         this.directions = directions;
     }
 
+    public String getLabelField() {
+        return labelField;
+    }
+
+    public void setLabelField(String labelField) {
+        this.labelField = labelField;
+    }
+
+    public String getGender() {
+        return gender;
+    }
+
+    public void setGender(String gender) {
+        this.gender = gender;
+    }
+
+    public String getMyCoolBean() {
+        return myCoolBean;
+    }
+
+    public void setMyCoolBean(String myCoolBean) {
+        this.myCoolBean = myCoolBean;
+    }
 }
