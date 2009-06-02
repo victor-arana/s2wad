@@ -18,6 +18,8 @@
       <s:label name="labelField" label="%{getText('labelField')}"/>
       <s:radio key="gender" list="genderOptions"/>
       <s:radio key="myCoolBean" list="coolBeans" listKey="id" listValue="text"/>
+      <s:checkbox key="checkbox1" fieldValue="true"/>
+      <s:checkboxlist list="listOfCbs" key="cblist"/>
       <s:submit/>
     </s:form>
   </body>

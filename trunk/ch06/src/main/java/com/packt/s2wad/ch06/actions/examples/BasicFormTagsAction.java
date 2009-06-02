@@ -23,6 +23,8 @@ public class BasicFormTagsAction extends ActionSupport {
     private String labelField = "Display-only label field";
     private String gender;
     private String myCoolBean;
+    private Boolean checkbox1;
+    private List<Boolean> cblist;
 
     private static final Log LOG = LogFactory.getLog(BasicFormTagsAction.class);
 
@@ -56,6 +58,10 @@ public class BasicFormTagsAction extends ActionSupport {
         });
     }
 
+    public List<Boolean> getListOfCbs() {
+        return Arrays.asList(new Boolean[] { true, false, true, true, false });
+    }
+
     @Override
     public String toString() {
         return "BasicFormTagsAction{" +
@@ -66,6 +72,8 @@ public class BasicFormTagsAction extends ActionSupport {
                ", labelField='" + labelField + '\'' +
                ", gender='" + gender + '\'' +
                ", myCoolBean='" + myCoolBean + '\'' +
+               ", checkbox1=" + checkbox1 +
+               ", cblist=" + cblist +
                '}';
     }
 
@@ -139,4 +147,21 @@ public class BasicFormTagsAction extends ActionSupport {
     public void setMyCoolBean(String myCoolBean) {
         this.myCoolBean = myCoolBean;
     }
+
+    public Boolean getCheckbox1() {
+        return checkbox1;
+    }
+
+    public void setCheckbox1(Boolean checkbox1) {
+        this.checkbox1 = checkbox1;
+    }
+
+    public List<Boolean> getCblist() {
+        return cblist;
+    }
+
+    public void setCblist(List<Boolean> cblist) {
+        this.cblist = cblist;
+    }
+
 }
