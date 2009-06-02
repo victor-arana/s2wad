@@ -11,7 +11,7 @@
 
     <h2>See <span class="code">c.p.s.ch07.actions.examples.MessageGamesAction</span></h2>
 
-    <s:form action="message-games">
+    <s:form action="message-games-process">
       <s:textfield key="name" />
       <s:submit />
     </s:form>
