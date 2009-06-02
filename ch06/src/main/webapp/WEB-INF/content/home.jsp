@@ -12,6 +12,7 @@
     <ul>
       <li><a href="<s:url action='name-value-label-key' namespace='/examples'/>">Form element names, labels, keys, and values</a></li>
       <li><a href="<s:url action='basic-form-tags' namespace='/examples'/>">Basic form tags</a></li>
+      <li><a href="<s:url action='new-recipe' namespace='/recipes'/>">Recipe type user story: enter new recipe</a></li>
     </ul>
   </body>
 </html>

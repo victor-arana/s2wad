@@ -8,22 +8,42 @@ import com.packt.s2wad.ch06.models.Recipe;
 import com.packt.s2wad.ch06.models.RecipeType;
 import com.packt.s2wad.ch06.services.FakeRecipeTypeService;
 import com.packt.s2wad.ch06.services.RecipeTypeService;
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
 import org.apache.struts2.convention.annotation.Action;
+import org.apache.struts2.convention.annotation.Result;
+import org.apache.struts2.convention.annotation.Results;
 
+@Results({
+        @Result(name = ActionSupport.INPUT,
+                location = "/WEB-INF/content/recipes/new-recipe.jsp"),
+        @Result(name = "thanks",
+                location = "/WEB-INF/content/recipes/new-recipe-thanks.jsp")
+})
 public class NewRecipeAction extends ActionSupport implements Preparable {
 
     private Recipe recipe;
-
     private Collection<RecipeType> recipeTypeOptions;
+
     private static RecipeTypeService recipeTypeService = new FakeRecipeTypeService();
 
-    public void prepare() throws Exception {
-        recipeTypeOptions = recipeTypeService.getAll();
+    private static final Log LOG = LogFactory.getLog(NewRecipeAction.class);
+
+    @Override
+    @Action(value = "new-recipe")
+    public String input() throws Exception {
+        LOG.debug("Enter.");
+        return INPUT;
     }
 
     @Action(value = "new-recipe-process")
     public String process() {
+        LOG.debug("Enter: " + recipe);
         return "thanks";
+    }
+
+    public void prepare() throws Exception {
+        recipeTypeOptions = recipeTypeService.getAll();
     }
 
     public Collection<RecipeType> getRecipeTypeOptions() {
