@@ -27,6 +27,30 @@
     </field-validator>
   </field>
 
+  <field name="reqd">
+    <field-validator type="required">
+      <message>double primitive will never be null.</message>
+    </field-validator>
+
+    <field-validator type="double">
+      <param name="minInclusive">10</param>
+      <param name="maxExclusive">20</param>
+      <message>'double' must be between %{minInclusive} and %{maxInclusive} (inclusive).</message>
+    </field-validator>
+  </field>
+
+  <field name="reqDouble">
+    <field-validator type="required">
+      <message>Double object may be null.</message>
+    </field-validator>
+
+    <field-validator type="double">
+      <param name="minInclusive">10</param>
+      <param name="maxExclusive">20</param>
+      <message>'Double' must be between %{minInclusive} and %{maxInclusive} (inclusive).</message>
+    </field-validator>
+  </field>
+
   <field name="email">
     <field-validator type="requiredstring">
       <message>Email is required.</message>
@@ -35,7 +59,27 @@
     <field-validator type="email">
       <message>Invalid email</message>
     </field-validator>
+
+    <field-validator type="fieldexpression">
+      <param name="expression">!email.startsWith('dave')</param>
+      <message>No daves!</message>
+    </field-validator>
   </field>
+
+  <field name="cemail">
+    <field-validator type="requiredstring">
+      <message>Confirmation email is required.</message>
+    </field-validator>
+
+    <field-validator type="email">
+      <message>Invalid confirmation email</message>
+    </field-validator>
+  </field>
+
+  <validator type="expression">
+    <param name="expression">email.equals(cemail)</param>
+    <message>Email addresses don't match.</message>
+  </validator>
 
   <field name="url">
     <field-validator type="requiredstring">
