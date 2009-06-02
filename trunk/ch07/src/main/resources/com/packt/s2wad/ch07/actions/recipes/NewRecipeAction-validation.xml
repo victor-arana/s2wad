@@ -3,16 +3,16 @@
     "http://www.opensymphony.com/xwork/xwork-validator-1.0.2.dtd">
 
 <validators>
-  <validator type="requiredstring">
-    <param name="fieldName">recipe.name</param>
-    <message>Recipe name is required.</message>
-  </validator>
+  <field name="recipe.name">
+    <field-validator type="requiredstring">
+      <message>%{getText(fieldName)} is required.</message>
+    </field-validator>
 
-  <validator type="stringlength">
-    <param name="fieldName">recipe.name</param>
-    <param name="minLength">3</param>
-    <message>Recipe name must be at least ${minLength} characters</message>
-  </validator>
+    <field-validator type="stringlength">
+      <param name="minLength">3</param>
+      <message>%{getText(fieldName)} must be at least %{minLength} characters</message>
+    </field-validator>
+  </field>
 
   <field name="recipe.ingredients">
     <field-validator type="requiredstring">

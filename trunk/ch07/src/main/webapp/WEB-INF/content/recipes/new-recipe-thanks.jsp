@@ -1,3 +1,5 @@
+<%@ taglib prefix="s" uri="/struts-tags" %>
+
 <html>
   <head>
     <title>RecipeBox | Thanks!</title>
