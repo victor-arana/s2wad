@@ -5,7 +5,7 @@
 <validators>
   <field name="recipe.name">
     <field-validator type="requiredstring">
-      <message>%{getText(fieldName)} is required.</message>
+      <message key="requiredstring"/>
     </field-validator>
 
     <field-validator type="stringlength">
@@ -16,7 +16,7 @@
 
   <field name="recipe.ingredients">
     <field-validator type="requiredstring">
-      <message>Recipe ingredients are required.</message>
+      <message key="requiredstring"/>
     </field-validator>
   </field>
 </validators>
