@@ -27,7 +27,7 @@
       <tr><th colspan="2">s:doubleselect</th></tr>
       <s:doubleselect doubleName="dsel2"
                       list="{'one', 'two', 'three'}"
-                      doubleList="top=='one' ? {'1a', '1b} : top=='two'?{'2a', '2b'}:{'3a','3b'}"
+                      doubleList="top=='one' ? {'1a', '1b'} : top=='two' ? {'2a', '2b'} : {'3a', '3b'}"
           />
       <s:submit/>
     </s:form>
