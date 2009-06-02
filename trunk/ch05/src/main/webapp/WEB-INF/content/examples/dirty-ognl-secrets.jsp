@@ -7,6 +7,8 @@
   </head>
 
   <body>
+    <h1>Dirty OGNL Secrets</h1>
+
     <s:generator separator="," val="%{'a, b, c, d, e, f'}"
                  var="letters" />
     <s:iterator value='%{#letters.{?#this.matches("[aeiou]")}}'>
@@ -16,5 +18,7 @@
     <s:iterator value="{1,'a',4.5}.{class.name}">
       <s:property />&nbsp;
     </s:iterator>
+    <hr />
+    <p style="font-size: 0.7em">(Honest, they're dirtier than they look here.)</p>
   </body>
 </html>

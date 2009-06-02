@@ -22,6 +22,7 @@
       <li><a href="<s:url action='other-col-tags' namespace='/examples'/>">Other collection tags</a></li>
       <li><a href="<s:url action='subset-filter' namespace='/examples'/>">Subset Filtering Example</a></li>
       <li><a href="<s:url action='dirty-ognl-secrets' namespace='/examples'/>">Dirty OGNL Secrets</a></li>
+      <li><a href="<s:url action='include-tag' namespace='/examples'/>">The "action" tag</a></li>
     </ul>
   </body>
 </html>
