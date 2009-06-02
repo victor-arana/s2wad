@@ -3,25 +3,20 @@
 <html>
   <head>
     <title>Generator Converter Example</title>
-    <style type="text/css">
-      body {
-        font-family: sans-serif;
-      }
-
-      h1 {
-        font-size: 1.2em;
-      }
-    </style>
+    <link type="text/css" rel="stylesheet" href="<s:url value='/css/main.css'/>" />
   </head>
 
   <body>
     <h1>Generator Converter Example</h1>
 
-    <s:generator val="%{'0,1,2'}"
+    <h2>See <span class="code">com.packt.s2wad.ch05.actions.examples.GeneratorConverterAction</span></h2>
+
+    <s:generator val="%{'0,1,2,4,5'}"
                  var="dates" separator=","
-                 converter="calConverter"/>
+                 converter="calConverter" />
     <s:iterator var="aData" value="#dates">
-      <s:date name="#aData" format="yyyy-MM-dd"/>&nbsp;
+      <s:date name="#aData" format="yyyy-MM-dd" />
+      <br />
     </s:iterator>
   </body>
 </html>

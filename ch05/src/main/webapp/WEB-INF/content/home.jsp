@@ -13,9 +13,12 @@
       <li><a href="<s:url action='scoped-attrs' namespace='/examples'/>">Scoped Attribute Examples</a></li>
       <li><a href="<s:url action='static-util' namespace='/examples'/>">OGNL static method access</a></li>
       <li><a href="<s:url action='conditionals' namespace='/examples'/>">OGNL conditionals</a></li>
-      <li><a href="<s:url action='ognl-string-gotcha' namespace='/examples'/>">OGNL String comparison <strong>gotcha!</strong></a></li>
+      <li><a href="<s:url action='ognl-string-gotcha' namespace='/examples'/>">OGNL String comparison
+        <strong>gotcha!</strong></a></li>
       <li><a href="<s:url action='iterator-tag' namespace='/examples'/>">Iterator tag</a></li>
       <li><a href="<s:url action='list-styling' namespace='/examples'/>">List Styling CSS Detour</a></li>
+      <li><a href="<s:url action='generator-tag' namespace='/examples'/>">Generator tag</a></li>
+      <li><a href="<s:url action='generator-converter' namespace='/examples'/>">Generator Converter Example</a></li>
     </ul>
   </body>
 </html>
