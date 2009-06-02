@@ -5,15 +5,4 @@
 <struts>
   <constant name="struts.devMode" value="true"/>
   <constant name="struts.enable.DynamicMethodInvocation" value="false"/>
-
-  <package name="default" namespace="/" extends="struts-default">
-    <action name="sanity" class="com.packt.s2wad.ch07.sanity.SanityAction">
-      <result>sanity.jsp</result>
-      <result name="input">sanity.jsp</result>
-    </action>
-
-    <action name="getparam" class="com.packt.s2wad.ch07.sanity.GetParamAction">
-      <result>getparam.jsp</result>
-    </action>
-  </package>
 </struts>

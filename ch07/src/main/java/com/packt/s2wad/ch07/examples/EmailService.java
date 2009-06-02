@@ -1,4 +1,4 @@
-package com.packt.s2wad.ch07.services;
+package com.packt.s2wad.ch07.examples;
 
 import org.apache.commons.logging.LogFactory;
 import org.apache.commons.logging.Log;
@@ -13,5 +13,5 @@ public class EmailService {
         LOG.debug("  Returning " + x);
         return x;
     }
-    
+
 }
