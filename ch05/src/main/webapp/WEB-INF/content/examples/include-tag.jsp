@@ -41,5 +41,16 @@
 
       <p>Re-sweet.</p>
     </div>
+
+    <hr />
+
+    <div>
+      <p>Now we'll pass in a string and a real-live Java list to an action. That's actually
+        kinda cool, although it's unlikely to get you a date.</p>
+      <s:action name="included-with-params" namespace="/examples" executeResult="true">
+        <s:param name="foo">I'm a simple string.</s:param>
+        <s:param name="list1" value="{'11', '22', '33', '44'}" />
+      </s:action>
+    </div>
   </body>
 </html>
