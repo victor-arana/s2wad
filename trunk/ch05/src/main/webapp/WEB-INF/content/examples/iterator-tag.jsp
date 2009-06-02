@@ -3,23 +3,12 @@
 <html>
   <head>
     <title>Iterator Tag Examples</title>
-    <style type="text/css">
-      body {
-        font-family: sans-serif;
-      }
-
-      dt {
-        font-weight: bold;
-      }
-
-      dd {
-        padding-bottom: 0.5em;
-      }
-    </style>
+    <link type="text/css" rel="stylesheet" href="<s:url value='/css/main.css'/>"/>
   </head>
 
   <body>
     <h1>Iterator Tag Examples</h1>
+    <h2>See <span class="code">com.packt.s2wad.ch05.actions.examples.IteratorTagAction</span></h2>
 
     <dl>
       <dt>Iterate over list with &lt;s:property/></dt>
@@ -69,6 +58,39 @@
             <li><s:property value="#sl.s"/></li>
           </s:iterator>
         </ul>
+      </dd>
+
+      <dt>Track iteration status:</dt>
+      <dd>
+        <table>
+          <tr>
+            <th>List value</th>
+            <th>Index</th>
+            <th>Count</th>
+            <th>Even?</th>
+            <th>Odd?</th>
+            <th>First?</th>
+            <th>Last?</th>
+            <th>modulus(2)</th>
+            <th>modulus(4)</th>
+            <th>count % 4</th>
+          </tr>
+
+          <s:iterator value="list1" status="stat">
+            <tr>
+              <td><s:property /></td>
+              <td><s:property value="#stat.index"/></td>
+              <td><s:property value="#stat.count"/></td>
+              <td><s:property value="#stat.even"/></td>
+              <td><s:property value="#stat.odd"/></td>
+              <td><s:property value="#stat.first"/></td>
+              <td><s:property value="#stat.last"/></td>
+              <td><s:property value="#stat.modulus(2)"/></td>
+              <td><s:property value="#stat.modulus(4)"/></td>
+              <td><s:property value="#stat.count % 4"/></td>
+            </tr>
+          </s:iterator>
+        </table>
       </dd>
     </dl>
   </body>

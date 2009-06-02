@@ -1,9 +1,6 @@
 package com.packt.s2wad.ch05.actions.examples;
 
-import java.util.List;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 
 import com.opensymphony.xwork2.ActionSupport;
 
@@ -36,6 +33,10 @@ public class IteratorTagAction extends ActionSupport {
         public void setS(String s) { this.s = s; }
     }
 
+    private List<String> list1 = Arrays.asList(new String[] {
+            "AA", "TT", "GC", "CT", "TT", "TA", "AA", "AA"
+    });
+
     public List<String> getListOfStrings() {
         return listOfStrings;
     }
@@ -58,6 +59,10 @@ public class IteratorTagAction extends ActionSupport {
 
     public void setSimpleList(List<SimpleObj> simpleList) {
         this.simpleList = simpleList;
+    }
+
+    public List<String> getList1() {
+        return list1;
     }
 
 }
