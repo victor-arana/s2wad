@@ -11,7 +11,6 @@ import org.apache.struts2.convention.annotation.Action;
 import org.apache.struts2.convention.annotation.Result;
 import org.apache.struts2.convention.annotation.Results;
 
-@Conversion
 @Results({
         @Result(name = ActionSupport.INPUT,
                 location = "/WEB-INF/content/examples/big-decimal-trim.jsp"),
@@ -19,6 +18,7 @@ import org.apache.struts2.convention.annotation.Results;
                 type = "redirectAction",
                 location = "big-decimal-trim")
 })
+@Conversion
 public class BigDecimalTrimAction extends ActionSupport {
 
     private BigDecimal big;
