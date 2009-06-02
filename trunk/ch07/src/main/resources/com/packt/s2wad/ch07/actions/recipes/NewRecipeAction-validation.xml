@@ -8,6 +8,12 @@
     <message>Recipe name is required.</message>
   </validator>
 
+  <validator type="stringlength">
+    <param name="fieldName">recipe.name</param>
+    <param name="minLength">3</param>
+    <message>Recipe name must be at least ${minLength} characters</message>
+  </validator>
+
   <field name="recipe.ingredients">
     <field-validator type="requiredstring">
       <message>Recipe ingredients are required.</message>
