@@ -7,27 +7,25 @@ import java.util.Collection;
 
 import com.packt.s2wad.ch07.models.Recipe;
 import com.packt.s2wad.ch07.models.RecipeType;
+import com.packt.s2wad.ch07.models.ShoppingListItem;
 
 public class FakeRecipeService implements RecipeService {
 
-    public static Recipe NO_RECIPE = new Recipe(0, "Not Found", "Recipe not found");
+    public static Recipe NO_RECIPE = new Recipe(0, "Not Found", "Recipe not found", "");
 
     private static Map<Integer, Recipe> recipes = new LinkedHashMap<Integer, Recipe>() {{
         Recipe r;
 
-        r = new Recipe(1,"Spicy Lentil Pot",
-                       // Ingredients
-                       "A spicy lentil-vegetable soup",
-                       "1/2 cup - dry lentils\n" +
-                       "2 - large carrots\n" +
-                       "1 - red onion",
-                       // Directions
-                       "Mix it all up and cook!");
+        r = new Recipe(1, "Spicy Lentil Pot", "A spicy lentil-vegetable soup", "Mix it all up and cook!");
 
         r.setRecipeTypes(new ArrayList<RecipeType>() {{
             add(new RecipeType(1, "Test Type"));
             add(new RecipeType(2, "Another type"));
         }});
+
+        r.addIngredient(new ShoppingListItem("1/2 cup", "Dry lentils"));
+        r.addIngredient(new ShoppingListItem("2", "Large carrots"));
+        r.addIngredient(new ShoppingListItem("1", "Red onion"));
 
         put(1, r);
     }};
