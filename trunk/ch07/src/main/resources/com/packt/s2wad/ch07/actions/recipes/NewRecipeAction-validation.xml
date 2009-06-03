@@ -13,10 +13,4 @@
       <message>%{getText(fieldName)} must be at least %{minLength} characters</message>
     </field-validator>
   </field>
-
-  <field name="recipe.ingredients">
-    <field-validator type="requiredstring">
-      <message key="requiredstring"/>
-    </field-validator>
-  </field>
 </validators>
