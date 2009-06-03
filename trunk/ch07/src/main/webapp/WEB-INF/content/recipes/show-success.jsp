@@ -17,7 +17,19 @@
       </div>
 
       <div id="ingredients">
-        ${recipe.ingredients}
+        <table>
+          <tr>
+            <th>Quantity</th>
+            <th>Ingredient</th>
+          </tr>
+
+          <s:iterator value="recipe.ingredients">
+            <tr>
+              <td><s:property value="quantity" /></td>
+              <td><s:property value="name" /></td>
+            </tr>
+          </s:iterator>
+        </table>
       </div>
     </div>
   </body>

@@ -1,13 +1,14 @@
 package com.packt.s2wad.ch07.models;
 
 import java.util.List;
+import java.util.ArrayList;
 
 public class Recipe {
 
     public Integer id;
     public String name;
     public String description;
-    public String ingredients;
+    public List<ShoppingListItem> ingredients;
     public String directions;
     public List<RecipeType> recipeTypes;
 
@@ -15,18 +16,16 @@ public class Recipe {
         // Default ctor.
     }
 
-    public Recipe(Integer id, String name, String description) {
+    public Recipe(Integer id, String name, String description, String directions) {
         this.id = id;
         this.name = name;
         this.description = description;
+        this.directions = directions;
+        this.ingredients = new ArrayList<ShoppingListItem>();
     }
 
-    public Recipe(Integer id, String name, String description, String ingredients, String directions) {
-        this.id = id;
-        this.name = name;
-        this.description = description;
-        this.ingredients = ingredients;
-        this.directions = directions;
+    public void addIngredient(ShoppingListItem item) {
+        ingredients.add(item);
     }
 
     @Override
@@ -66,14 +65,6 @@ public class Recipe {
         this.description = description;
     }
 
-    public String getIngredients() {
-        return ingredients;
-    }
-
-    public void setIngredients(String ingredients) {
-        this.ingredients = ingredients;
-    }
-
     public String getDirections() {
         return directions;
     }
@@ -89,4 +80,13 @@ public class Recipe {
     public void setRecipeTypes(List<RecipeType> recipeTypes) {
         this.recipeTypes = recipeTypes;
     }
+
+    public List<ShoppingListItem> getIngredients() {
+        return ingredients;
+    }
+
+    public void setIngredients(List<ShoppingListItem> ingredients) {
+        this.ingredients = ingredients;
+    }
+
 }
