@@ -15,7 +15,12 @@
       <s:checkboxlist key="recipe.recipeTypes"
                       list="recipeTypeOptions"
                       listKey="name" listValue="name"/>
-      <s:textarea key="recipe.ingredients" rows="5" cols="40"/>
+
+      <s:iterator value="{1,2,3,4,5,6,7,8,9,10}" var="idx">
+        <s:textfield name="recipe.ingredients[%{idx-1}].quantity" size="4"/>
+        <s:textfield  name="recipe.ingredients[%{idx-1}].name" size="30"/>
+      </s:iterator>
+
       <s:textarea key="recipe.directions" rows="5" cols="40"/>
       <s:submit/>
     </s:form>
