@@ -17,7 +17,7 @@
                       listKey="name" listValue="name"/>
 
       <s:iterator value="{1,2,3,4,5,6,7,8,9,10}" var="idx">
-        <s:textfield name="recipe.ingredients[%{idx-1}].quantity" size="4"/>
+        <s:textfield label="%{getText('recipe.ingredientn', { #idx })}" name="recipe.ingredients[%{idx-1}].quantity" size="4"/>
         <s:textfield  name="recipe.ingredients[%{idx-1}].name" size="30"/>
       </s:iterator>
 
