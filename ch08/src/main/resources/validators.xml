@@ -1,7 +1,0 @@
-<!DOCTYPE validators PUBLIC
-    "-//OpenSymphony Group//XWork Validator Config 1.0//EN"
-    "http://www.opensymphony.com/xwork/xwork-validator-config-1.0.dtd">
-
-<validators>
-  <validator name="classification" class="com.packt.s2wad.ch08.examples.ClassificationValidator" />
-</validators>
