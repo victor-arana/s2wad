@@ -11,9 +11,6 @@
 
     <ul>
       <li><a href="<s:url action='new-recipe' namespace='/recipes'/>">New Recipe</a></li>
-      <li><a href="<s:url action='message-games' namespace='/examples'/>">Validation Message Games</a></li>
-      <li><a href="<s:url action='validators' namespace='/examples'/>">Validators</a></li>
-      <li><a href="<s:url action='test-classification' namespace='/examples'/>">Classification Validator</a></li>
       <li><a href="<s:url action='big-decimal-trim' namespace='/examples'/>">BigDecimal TypeConverter</a></li>
     </ul>
   </body>
