@@ -1,7 +1,6 @@
-package com.packt.s2wad.ch07.actions.examples;
+package com.packt.s2wad.ch08.actions.examples;
 
 import com.opensymphony.xwork2.ActionSupport;
-import com.packt.s2wad.ch07.actions.recipes.NewRecipeAction;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.apache.struts2.convention.annotation.Action;

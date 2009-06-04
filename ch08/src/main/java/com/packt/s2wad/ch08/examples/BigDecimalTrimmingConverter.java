@@ -1,4 +1,4 @@
-package com.packt.s2wad.ch07.examples;
+package com.packt.s2wad.ch08.examples;
 
 import java.util.Map;
 import java.math.BigDecimal;

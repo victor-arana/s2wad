@@ -1,4 +1,4 @@
-package com.packt.s2wad.ch07.actions.examples;
+package com.packt.s2wad.ch08.actions.examples;
 
 import java.math.BigDecimal;
 
