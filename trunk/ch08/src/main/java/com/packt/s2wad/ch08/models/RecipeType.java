@@ -1,4 +1,4 @@
-package com.packt.s2wad.ch07.models;
+package com.packt.s2wad.ch08.models;
 
 public class RecipeType {
 

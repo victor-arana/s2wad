@@ -1,8 +1,8 @@
-package com.packt.s2wad.ch07.examples;
+package com.packt.s2wad.ch08.examples;
 
 import com.opensymphony.xwork2.validator.validators.FieldValidatorSupport;
 import com.opensymphony.xwork2.validator.ValidationException;
-import com.packt.s2wad.ch07.examples.ClassificationService;
+import com.packt.s2wad.ch08.examples.ClassificationService;
 import org.apache.commons.logging.LogFactory;
 import org.apache.commons.logging.Log;
 
