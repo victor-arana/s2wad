@@ -28,7 +28,7 @@ public class XmlTrimAction extends ActionSupport {
     }
 
     @RequiredFieldValidator(message="Included is required")
-    @DoubleRangeFieldValidator(message="Excluded BigDecimal Error")
+    @DoubleRangeFieldValidator(message="Included BigDecimal Error")
     public void setIncludedVal(BigDecimal includedLong) {
         includedVal = includedLong;
     }
