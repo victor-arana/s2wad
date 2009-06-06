@@ -12,7 +12,7 @@
 
     <h2>See <span class="code">c.p.s.ch08.interceptors.struts-interceptors.xml</span></h2>
 
-    <h2>See <span class="code">c.p.s.ch08.interceptors.AnnotationTrimAction</span></h2>
+    <h2>See <span class="code">c.p.s.ch08.actions.examples.AnnotationTrimAction</span></h2>
 
     <p>
       Both these fields are BigDecimal action properties. The
