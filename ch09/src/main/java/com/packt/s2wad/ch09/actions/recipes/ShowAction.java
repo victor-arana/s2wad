@@ -1,12 +1,12 @@
-package com.packt.s2wad.ch08.actions.recipes;
+package com.packt.s2wad.ch09.actions.recipes;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 
 import com.opensymphony.xwork2.ActionSupport;
-import com.packt.s2wad.ch08.models.Recipe;
-import com.packt.s2wad.ch08.services.RecipeService;
-import com.packt.s2wad.ch08.services.FakeRecipeService;
+import com.packt.s2wad.ch09.models.Recipe;
+import com.packt.s2wad.ch09.services.RecipeService;
+import com.packt.s2wad.ch09.services.FakeRecipeService;
 
 public class ShowAction extends ActionSupport {
 
