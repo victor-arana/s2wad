@@ -2,12 +2,12 @@
 
 <html>
   <head>
-    <title>Chapter 7 | Validation and Conversion</title>
+    <title>Chapter 8 | Interceptors</title>
     <link rel="stylesheet" href="<s:url value='/css/main.css'/>" type="text/css"/>
   </head>
 
   <body>
-    <h1>Validation and Conversion</h1>
+    <h1>Interceptors</h1>
 
     <ul>
       <li><a href="<s:url action='new-recipe' namespace='/recipes'/>">New Recipe</a></li>
