@@ -13,6 +13,6 @@
 
     <h2>See <span class="code">struts.xml</span></h2>
 
-    <p>If you're seeing this the <span class="code">RuntimeException</span> wasn't caught.</p>
+    <p>If you're seeing this the <span class="code">RuntimeException</span> wasn't caught: something is broken?</p>
   </body>
 </html>
