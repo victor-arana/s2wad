@@ -11,6 +11,8 @@
 
     <ul>
       <li><a href="<s:url action='new-recipe' namespace='/recipes'/>">New Recipe</a></li>
+      <li><a href="<s:url action='except'/>">Global exception result</a></li>
+      <li><a href="<s:url action='except1'/>">Action-specific exception result</a></li>
     </ul>
   </body>
 </html>
