@@ -9,10 +9,12 @@
   <package name="default" namespace="/" extends="struts-default">
     <global-results>
       <result name="runtime">/WEB-INF/content/examples/exceptions/runtime.jsp</result>
+      <result name="access-exception">/WEB-INF/content/examples/exceptions/access-exception.jsp</result>
     </global-results>
 
     <global-exception-mappings>
       <exception-mapping exception="java.lang.RuntimeException" result="runtime"/>
+      <exception-mapping exception="com.packt.s2wad.ch09.examples.exceptions.UserAccessException" result="access-exception"/>
     </global-exception-mappings>
 
     <action name="except" class="com.packt.s2wad.ch09.examples.exceptions.Except" method="except">
@@ -28,6 +30,10 @@
       <exception-mapping exception="java.lang.RuntimeException" result="runtime2"/>
       <result>/WEB-INF/content/examples/exceptions/except.jsp</result>
       <result name="runtime2">/WEB-INF/content/examples/exceptions/except2-mapping-runtime.jsp</result>
+    </action>
+
+    <action name="noaccess" class="com.packt.s2wad.ch09.examples.exceptions.UserAccessExample" method="noAccess">
+      <result>/WEB-INF/content/examples/exceptions/has-access.jsp</result>
     </action>
   </package>
 </struts>
