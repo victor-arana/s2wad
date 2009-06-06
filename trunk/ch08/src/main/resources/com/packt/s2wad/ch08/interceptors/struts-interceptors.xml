@@ -6,7 +6,7 @@
   <package name="interceptor-examples" namespace="/xml/interceptors" extends="struts-default">
     <interceptors>
       <interceptor name="trim" class="com.packt.s2wad.ch08.interceptors.TrimInterceptor" />
-      <!--<interceptor name="resultMapper" class="com.packt.s2wad.ch08.interceptors.ResultMappingInterceptor" />-->
+      <interceptor name="resultMapper" class="com.packt.s2wad.ch08.interceptors.ResultMappingInterceptor" />
 
       <!-- A short stack to keep things very clear. -->
       <interceptor-stack name="testTrim">
@@ -40,7 +40,10 @@
       <result name="input">/WEB-INF/content/interceptors/trim-input-xml.jsp</result>
     </action>
 
-<!--
+    <!--
+        This example is configured via XML only, as we're simulating an action
+        whose result names we cannot re-define.
+    -->
     <action name="mapping" class="com.packt.s2wad.ch08.interceptors.CrazyResultNames">
       <interceptor-ref name="defaultStack" />
       <interceptor-ref name="resultMapper">
@@ -48,10 +51,9 @@
           #{"strangeSuccess" : "success", "irritatingInput" : "input"}
         </param>
       </interceptor-ref>
-      <result name="input">/WEB-INF/jsps/interceptors/crazy-input.jsp</result>
-      <result name="success">/WEB-INF/jsps/interceptors/crazy-success.jsp</result>
-      <result name="notmapped">/WEB-INF/jsps/interceptors/crazy-notmapped.jsp</result>
+      <result name="input">/WEB-INF/content/interceptors/crazy-input.jsp</result>
+      <result name="success">/WEB-INF/content/interceptors/crazy-success.jsp</result>
+      <result name="notmapped">/WEB-INF/content/interceptors/crazy-notmapped.jsp</result>
     </action>
--->
   </package>
 </struts>
