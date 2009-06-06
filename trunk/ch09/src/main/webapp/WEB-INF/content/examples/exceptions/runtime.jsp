@@ -12,5 +12,7 @@
     <h2>See <span class="code">com.packt.s2wad.ch09.examples.exceptions.Except</span></h2>
 
     <h2>See <span class="code">struts.xml</span></h2>
+
+    <p>Here's the message from the exception: <s:property value="exception.message" /></p>
   </body>
 </html>

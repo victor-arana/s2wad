@@ -14,5 +14,7 @@
     <h2>See <span class="code">struts.xml</span></h2>
 
     <p>This exception mapping <strong>AND</strong> result is configured only for the 'except2' action.</p>
+
+    <p>Here's the message from the exception: <s:property value="exception.message"/></p>
   </body>
 </html>
