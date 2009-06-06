@@ -14,6 +14,7 @@
       <li><a href="<s:url action='big-decimal-trim' namespace='/examples'/>">BigDecimal TypeConverter</a></li>
       <li><a href="<s:url action='trim!input' namespace='/xml/interceptors'/>">Trim interceptor, XML config, no trimming</a></li>
       <li><a href="<s:url action='trim2!input' namespace='/xml/interceptors'/>">Trim interceptor, XML config, trimming</a></li>
+      <li><a href="<s:url action='trim' namespace='/anno/interceptors'/>">Trim interceptor, Annotation config, trimming</a></li>
     </ul>
   </body>
 </html>
