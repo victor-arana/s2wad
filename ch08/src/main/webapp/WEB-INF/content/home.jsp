@@ -15,6 +15,9 @@
       <li><a href="<s:url action='trim!input' namespace='/xml/interceptors'/>">Trim interceptor, XML config, no trimming</a></li>
       <li><a href="<s:url action='trim2!input' namespace='/xml/interceptors'/>">Trim interceptor, XML config, trimming</a></li>
       <li><a href="<s:url action='trim' namespace='/anno/interceptors'/>">Trim interceptor, Annotation config, trimming</a></li>
+      <li><a href="<s:url action='mapping' namespace='/xml/interceptors'/>">Result mapping, "strangeSuccess" remapped</a></li>
+      <li><a href="<s:url action='mapping!input' namespace='/xml/interceptors'/>">Result mapping, "irritatingInput" remapped</a></li>
+      <li><a href="<s:url action='mapping!notmapped' namespace='/xml/interceptors'/>">Result mapping, "napmapped" <strong>NOT</strong> remapped</a></li>
     </ul>
   </body>
 </html>
