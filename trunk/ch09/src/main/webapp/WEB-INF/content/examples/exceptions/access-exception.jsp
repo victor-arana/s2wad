@@ -13,7 +13,7 @@
 
     <h2>See <span class="code">com.packt.s2wad.ch09.examples.exceptions.UserAccessException</span></h2>
 
-    <div style="background-color: #aa3300; border: 1px solid #660000; color: #ddd; padding: 1em;">
+    <div style="background-color: #aa3300; border: 1px solid #660000; color: #ccc; padding: 1em;">
       <span style="font-size: 1.5em; font-weight: bold">User Access Exception</span>
       <ul style="list-style: none;">
         <li><strong>User:</strong> ${exception.user.fname} ${exception.user.lname}</li>
