@@ -22,5 +22,10 @@
     <action name="except1" class="com.packt.s2wad.ch09.examples.exceptions.Except">
       <result name="runtime">/WEB-INF/content/examples/exceptions/except1-runtime.jsp</result>
     </action>
+
+    <action name="except2" class="com.packt.s2wad.ch09.examples.exceptions.Except">
+      <exception-mapping exception="java.lang.RuntimeException" result="runtime2"/>
+      <result name="runtime2">/WEB-INF/content/examples/exceptions/except2-mapping-runtime.jsp</result>
+    </action>
   </package>
 </struts>
