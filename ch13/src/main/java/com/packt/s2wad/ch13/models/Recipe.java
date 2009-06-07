@@ -9,7 +9,7 @@ public class Recipe {
     public Integer id;
     public String name;
     public String description;
-    public List<ShoppingListItem> ingredients;
+    public List<RecipeIngredient> ingredients;
     public String directions;
     public List<RecipeType> recipeTypes;
 
@@ -22,20 +22,28 @@ public class Recipe {
         this.name = name;
         this.description = description;
         this.directions = directions;
-        this.ingredients = new ArrayList<ShoppingListItem>();
+        this.ingredients = new ArrayList<RecipeIngredient>();
+        this.recipeTypes = new ArrayList<RecipeType>();
     }
 
-    public void addIngredient(ShoppingListItem item) {
+    public Recipe addRecipeIngredient(RecipeIngredient item) {
         ingredients.add(item);
+        return this;
     }
 
-    /**
-     * Adds all ingredients to existing ingredient list.
-     *
-     * <p>This is primarily a convenience method for fixtures and fake recipe services.</p>
-     */
-    public void addIngredients(Collection<ShoppingListItem> items) {
+    public Recipe addIngredients(Collection<RecipeIngredient> items) {
         ingredients.addAll(items);
+        return this;
+    }
+
+    public Recipe addRecipeType(RecipeType type) {
+        recipeTypes.add(type);
+        return this;
+    }
+
+    public Recipe addRecipeTypes(Collection<RecipeType> types) {
+        recipeTypes.addAll(types);
+        return this;
     }
 
     @Override
@@ -45,7 +53,6 @@ public class Recipe {
                ", name='" + name + '\'' +
                ", description='" + description + '\'' +
                ", ingredients='" + ingredients + '\'' +
-               ", directions='" + directions + '\'' +
                '}';
     }
 
@@ -91,11 +98,11 @@ public class Recipe {
         this.recipeTypes = recipeTypes;
     }
 
-    public List<ShoppingListItem> getIngredients() {
+    public List<RecipeIngredient> getIngredients() {
         return ingredients;
     }
 
-    public void setIngredients(List<ShoppingListItem> ingredients) {
+    public void setIngredients(List<RecipeIngredient> ingredients) {
         this.ingredients = ingredients;
     }
 
