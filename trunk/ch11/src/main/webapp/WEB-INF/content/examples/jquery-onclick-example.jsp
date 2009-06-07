@@ -33,12 +33,24 @@
     </ul>
 
     <script type="text/javascript">
+      /**
+       * The JavaScript "module" for this page.
+       */
+      var MOD = {
+        buildLinkClickHandler: function (i) {
+          return function () {
+            alert("You clicked link #" + (i+1));
+          };
+        }
+      }
+
+      /**
+       * Passing a function to jQuery's $() method will
+       * run that function when the page's DOM is loaded.
+       */
       $(function () {
-        $("a.notify").each(function (i, theLink) {
-          theLink.onclick = function () {
-            alert("You clicked me.");
-            return false;
-          }
+        $("a.notify").each(function (i, el) {
+          el.onclick = MOD.buildLinkClickHandler(i);
         })
       });
     </script>
