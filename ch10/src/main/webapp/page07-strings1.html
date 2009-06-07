@@ -29,6 +29,11 @@
         <th>"hello there".replace(/l/g, "w")</th>
         <td><script>w("hello there".replace(/l/g, "w"))</script></td>
       </tr>
+      
+      <tr>
+        <th>"hello &lt;pre>there&lt;/pre> y'all".replace(/&lt;pre.*>/i, "").replace(/&lt;\/pre.*>/, "")</th>
+        <td><script>w("hello <pre>there</pre> y'all".replace(/<pre>/i, "").replace(/<\/pre.*>/, ""))</script></td>
+      </tr>
     </table>
   </body>
 </html>
