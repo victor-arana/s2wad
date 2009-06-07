@@ -9,7 +9,7 @@
   </head>
 
   <body>
-    <s:form action="new-recipe-process">
+    <s:form action="new-recipe-process" theme="s2wad">
       <tr>
         <td colspan="2">
           <h2><s:text name="new.title" /> Info</h2>
