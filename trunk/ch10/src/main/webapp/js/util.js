@@ -2,7 +2,7 @@ function w(s)   { document.write(s); }
 function wln(s) { w(s); w("<br/>");  }
 
 function code(s) {
-    w("<span class='code'>" + s + "</span>");
+    return "<span class='code'>" + s + "</span>";
 }
 
 function printAndEval(s) {
