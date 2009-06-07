@@ -10,8 +10,8 @@
     <h1>Create New Recipe</h1>
 
     <s:form action="new-recipe-process">
-      <s:textfield key="recipe.name" />
-      <s:textfield key="recipe.description" />
+      <s:textfield key="recipe.name" cssErrorClass="inputError"  />
+      <s:textfield key="recipe.description" cssErrorClass="inputError" />
       <s:checkboxlist key="recipe.recipeTypes"
                       list="recipeTypeOptions"
                       listKey="name" listValue="name" />
@@ -20,13 +20,15 @@
         <tr>
           <td><s:property value="%{getText('recipe.ingredientn', { #idx })}" /></td>
           <td>
-            <s:textfield name="recipe.ingredients[%{#idx-1}].quantity" size="4" theme="simple" />
-            <s:textfield name="recipe.ingredients[%{#idx-1}].name" size="30" theme="simple" />
+            <s:textfield name="recipe.ingredients[%{#idx-1}].quantity" size="4" theme="simple"
+                         cssErrorClass="inputError" />
+            <s:textfield name="recipe.ingredients[%{#idx-1}].name" size="30" theme="simple"
+                         cssErrorClass="inputError" />
           </td>
         </tr>
       </s:iterator>
 
-      <s:textarea key="recipe.directions" rows="5" cols="40" />
+      <s:textarea key="recipe.directions" rows="5" cols="40" cssErrorClass="inputError" />
       <s:submit />
     </s:form>
   </body>
