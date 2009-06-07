@@ -1,0 +1,46 @@
+<%@ taglib prefix="s" uri="/struts-tags" %>
+
+<html>
+  <head>
+    <title>Using jQuery to Add onclick Handlers</title>
+    <link rel="stylesheet" href="<s:url value='/css/main.css'/>" type="text/css" />
+    <script type="text/javascript" src="<s:url value="/jquery/jquery-1.2.6.js"/>"></script>
+  </head>
+
+  <body>
+    <h1>Using jQuery to Add onclick Handlers</h1>
+
+    <p>
+      We'll use jQuery to add functionality to links that have the "notify" class; the
+      first three links. The onclick functionality is handled <em>after</em> the page
+      is loaded: the link's HTML markup contains <em>no</em> funtionality!
+    </p>
+
+    <p>
+      Clicking on the first three links will bring up alert boxes. Clicking the last link,
+      which does not have the "notify" class, won't. CSS classes can be used to indicate
+      functionality as well as appearance.
+    </p>
+
+    <ul>
+      <s:iterator value="{'Link 1', 'Link 2', 'Link 3'}" var="linkText" status="stat">
+        <li>
+          <a href="#" class="notify">${linkText}</a>
+        </li>
+      </s:iterator>
+
+      <li><a href="#">We don't care about this link</a></li>
+    </ul>
+
+    <script type="text/javascript">
+      $(function () {
+        $("a.notify").each(function (i, theLink) {
+          theLink.onclick = function () {
+            alert("You clicked me.");
+            return false;
+          }
+        })
+      });
+    </script>
+  </body>
+</html>

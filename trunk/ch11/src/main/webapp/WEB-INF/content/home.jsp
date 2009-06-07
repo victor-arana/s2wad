@@ -11,6 +11,7 @@
 
     <ul>
       <li><a href="<s:url action='new-recipe' namespace='/recipes'/>">New Recipe</a></li>
+      <li><a href="<s:url action='jquery-onclick-example' namespace='/examples'/>">Usnig jQuery to add onclick handlers</a></li>
     </ul>
   </body>
 </html>
