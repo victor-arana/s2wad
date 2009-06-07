@@ -56,6 +56,7 @@
       wln(code("aDude.address.state") + ": " + aDude.address.state);
     </script>
 
+    <h2>Objects are open</h2>
     <p>We can also add properties to existing objects, like to <span class="code">aDude</span>:</p>
 
     <pre class="code">
@@ -66,6 +67,23 @@
       aDude.baz = "Plugh";
 
       wln(code("aDude.baz") + ": " + aDude.baz);
+    </script>
+
+    <h2>Object properties can be functions</h2>
+    <p>Lastly, object values can be functions.</p>
+
+    <pre class="code">
+      aDude.toString = function () {
+          return "aDude [fname=" + this.fname + ", lname=" + this.lname + "]";
+      }
+    </pre>
+
+    <script type="text/javascript">
+      aDude.toString = function () {
+          return "aDude [fname=" + this.fname + ", lname=" + this.lname + "]";
+      }
+
+      wln(code("document.write(aDude)") + ": " + aDude);
     </script>
   </body>
 </html>
