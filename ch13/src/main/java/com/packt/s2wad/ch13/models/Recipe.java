@@ -2,6 +2,7 @@ package com.packt.s2wad.ch13.models;
 
 import java.util.List;
 import java.util.ArrayList;
+import java.util.Collection;
 
 public class Recipe {
 
@@ -26,6 +27,15 @@ public class Recipe {
 
     public void addIngredient(ShoppingListItem item) {
         ingredients.add(item);
+    }
+
+    /**
+     * Adds all ingredients to existing ingredient list.
+     *
+     * <p>This is primarily a convenience method for fixtures and fake recipe services.</p>
+     */
+    public void addIngredients(Collection<ShoppingListItem> items) {
+        ingredients.addAll(items);
     }
 
     @Override
