@@ -52,3 +52,9 @@ input, textarea, select {
   border: 1px dotted #f66;
   background: #fee;
 }
+
+/* For the new theme's templates */
+
+.hasErrors td {
+  background: #fdd;
+}
