@@ -1,4 +1,4 @@
-package com.packt.s2wad.ch11.models;
+package com.packt.s2wad.ch12.models;
 
 import java.util.List;
 import java.util.ArrayList;

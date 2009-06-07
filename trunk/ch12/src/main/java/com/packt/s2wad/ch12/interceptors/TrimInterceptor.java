@@ -1,4 +1,4 @@
-package com.packt.s2wad.ch11.interceptors;
+package com.packt.s2wad.ch12.interceptors;
 
 import java.util.ArrayList;
 import java.util.List;
