@@ -5,11 +5,11 @@
                              http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
   <modelVersion>4.0.0</modelVersion>
-  <groupId>com.packt.s2wad.ch11</groupId>
-  <artifactId>ch11</artifactId>
+  <groupId>com.packt.s2wad.ch12</groupId>
+  <artifactId>ch12</artifactId>
   <version>1.0</version>
   <packaging>war</packaging>
-  <name>Packt Struts 2 Web Application Development - Chapter 11</name>
+  <name>Packt Struts 2 Web Application Development - Chapter 12</name>
 
   <dependencies>
     <dependency>
