@@ -37,9 +37,12 @@
        * The JavaScript "module" for this page.
        */
       var MOD = {
+        title: "Module MOD",
+
         buildLinkClickHandler: function (i) {
+          var that = this;
           return function () {
-            alert("You clicked link #" + (i+1));
+            alert("You clicked link #" + (i+1) + " from " + that.title);
           };
         }
       }
