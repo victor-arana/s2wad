@@ -1,13 +1,13 @@
 package com.packt.s2wad.ch13.services;
 
-import java.util.Map;
-import java.util.LinkedHashMap;
-import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collection;
+import java.util.LinkedHashMap;
+import java.util.Map;
 
 import com.packt.s2wad.ch13.models.Recipe;
-import com.packt.s2wad.ch13.models.RecipeType;
 import com.packt.s2wad.ch13.models.ShoppingListItem;
+import static com.packt.s2wad.ch13.services.FakeRecipeTypeService.*;
 
 public class FakeRecipeService implements RecipeService {
 
@@ -17,17 +17,27 @@ public class FakeRecipeService implements RecipeService {
         Recipe r;
 
         r = new Recipe(1, "Spicy Lentil Pot", "A spicy lentil-vegetable soup", "Mix it all up and cook!");
+        r.setRecipeTypes(Arrays.asList(RECIPE_TYPE_APPETIZER, RECIPE_TYPE_SIDE));
+        r.addIngredients(Arrays.asList(new ShoppingListItem("1/2 cup", "dry lentils"),
+                                       new ShoppingListItem("2", "carrots"),
+                                       new ShoppingListItem("1", "red onion"),
+                                       new ShoppingListItem("1c", "water")));
+        put(r.getId(), r);
 
-        r.setRecipeTypes(new ArrayList<RecipeType>() {{
-            add(new RecipeType(1, "Test Type"));
-            add(new RecipeType(2, "Another type"));
-        }});
+        r = new Recipe(2, "Golden Soup", "A spicy/sweet carrot soup", "Mix it all up and cook!");
+        r.setRecipeTypes(Arrays.asList(RECIPE_TYPE_APPETIZER, RECIPE_TYPE_SIDE));
+        r.addIngredients(Arrays.asList(new ShoppingListItem("1c", "water"),
+                                       new ShoppingListItem("4", "carrots"),
+                                       new ShoppingListItem("1T", "sour cream")));
+        put(r.getId(), r);
 
-        r.addIngredient(new ShoppingListItem("1/2 cup", "Dry lentils"));
-        r.addIngredient(new ShoppingListItem("2", "Large carrots"));
-        r.addIngredient(new ShoppingListItem("1", "Red onion"));
-
-        put(1, r);
+        r = new Recipe(3, "Cheesy Mashed Potatoes", "Smooth, creamy, cheesy mashed potatoes", "Mix it all up and cook!");
+        r.setRecipeTypes(Arrays.asList(RECIPE_TYPE_APPETIZER, RECIPE_TYPE_SIDE));
+        r.addIngredients(Arrays.asList(new ShoppingListItem("1c", "shredded cheddar cheese"),
+                                       new ShoppingListItem("4", "potatoes"),
+                                       new ShoppingListItem("2T", "sour cream"),
+                                       new ShoppingListItem("4T", "buttermilk")));
+        put(r.getId(), r);
     }};
 
     public Collection<Recipe> findAll() {
