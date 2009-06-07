@@ -1,4 +1,4 @@
-package com.packt.s2wad.ch12.models;
+package com.packt.s2wad.ch13.models;
 
 public class ShoppingListItem {
 
