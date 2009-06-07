@@ -5,8 +5,9 @@
 <html>
   <head>
     <title>RecipeBox | <s:text name="recipe.show.title" /></title>
-    <s:head/>
-    <sx:head debug="true"/>
+    <s:head />
+    <sx:head />
+    <link rel="stylesheet" href="<s:url value='/css/main.css'/>" type="text/css"/>
   </head>
 
   <body>
@@ -46,6 +47,24 @@
 
       <div id="ingredientInfo">
       </div>
+
+      <s:url action="recipes-with-ingredient" var="withUrl" />
+      <sx:div id="recipesWithIngredient" href="%{withUrl}" preload="false" listenTopics="/updateRecipes"
+              afterNotifyTopics="/resetUrl" highlightColor="#c99" highlightDuration="1000"></sx:div>
     </div>
+
+    <script type="text/javascript">
+      var baseUrl; // A global! Don't dothis ina real app.
+      dojo.event.topic.subscribe("/updateRecipes", function(data, request, widget) {
+        var ingredientId = widget.widgetId.split("_")[1];
+        var dest = dojo.widget.byId("recipesWithIngredient");
+        baseUrl = dest.href; // Referencing a global!
+        dest.href += "?ingredientId=" + ingredientId;
+      });
+
+      dojo.event.topic.subscribe("/resetUrl", function(data, request, widget) {
+        widget.href = baseUrl; // Restore URL from global!
+      });
+    </script>
   </body>
 </html>
