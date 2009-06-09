@@ -10,7 +10,7 @@ public class NgTestVowelDecider {
 
     private VowelDecider vd;
 
-    @BeforeClass
+    @BeforeClass(alwaysRun = true)
     public void setup() {
         vd = new VowelDecider();
     }
@@ -35,12 +35,12 @@ public class NgTestVowelDecider {
         assertFalse("No vowels", vd.decide("nvwls"));
     }
 
-    @Test(expectedExceptions = IllegalArgumentException.class)
+    @Test(groups = "exceptions", expectedExceptions = IllegalArgumentException.class)
     public void testNonStringArgument() throws Exception {
         vd.decide(1);
     }
 
-    @Test(expectedExceptions = IllegalArgumentException.class)
+    @Test(groups = "exceptions", expectedExceptions = IllegalArgumentException.class)
     public void testNullArgument() throws Exception {
         vd.decide(null);
     }
