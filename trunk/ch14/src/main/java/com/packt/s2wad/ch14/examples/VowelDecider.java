@@ -8,9 +8,9 @@ public class VowelDecider implements SubsetIteratorFilter.Decider {
         if ((null == o) || !(o instanceof String)) {
             throw new IllegalArgumentException("Expects non-null String");
         }
-        
+
         String s = (String) o;
-        return s.matches(".*[aeiouy]+.*");
+        return s.toLowerCase().matches(".*[aeiouy]+.*");
     }
 
 }
