@@ -5,4 +5,8 @@
 <struts>
   <constant name="struts.devMode" value="true" />
   <constant name="struts.enable.DynamicMethodInvocation" value="false" />
+
+  <bean name="yaml" type="org.apache.struts2.rest.handler.ContentTypeHandler" class="com.packt.s2wad.ch13.yaml.YamlHandler"/>
+  <constant name="struts.rest.handlerOverride.yaml" value="yaml"/>
+  <constant name="struts.action.extension" value="xhtml,,xml,json,yaml"/>
 </struts>
