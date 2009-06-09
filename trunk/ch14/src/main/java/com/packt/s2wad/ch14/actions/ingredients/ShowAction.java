@@ -1,15 +1,12 @@
-package com.packt.s2wad.ch13.actions.ingredients;
+package com.packt.s2wad.ch14.actions.ingredients;
 
 import com.opensymphony.xwork2.ActionSupport;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
-import org.apache.struts2.convention.annotation.Action;
-import org.apache.struts2.convention.annotation.Result;
-import org.apache.struts2.convention.annotation.Results;
 
-import com.packt.s2wad.ch13.services.IngredientService;
-import com.packt.s2wad.ch13.services.FakeIngredientService;
-import com.packt.s2wad.ch13.models.Ingredient;
+import com.packt.s2wad.ch14.services.IngredientService;
+import com.packt.s2wad.ch14.services.FakeIngredientService;
+import com.packt.s2wad.ch14.models.Ingredient;
 
 public class ShowAction extends ActionSupport {
 

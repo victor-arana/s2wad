@@ -1,4 +1,4 @@
-package com.packt.s2wad.ch13.services;
+package com.packt.s2wad.ch14.services;
 
 import java.util.Collection;
 import java.util.HashMap;
@@ -7,7 +7,7 @@ import java.util.Map;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 
-import com.packt.s2wad.ch13.models.Ingredient;
+import com.packt.s2wad.ch14.models.Ingredient;
 
 public class FakeIngredientService implements IngredientService {
 
