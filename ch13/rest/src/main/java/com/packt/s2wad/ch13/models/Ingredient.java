@@ -1,6 +1,8 @@
 package com.packt.s2wad.ch13.models;
 
-public class Ingredient {
+import java.io.Serializable;
+
+public class Ingredient implements Serializable {
 
     private Long id;
     private String name;
