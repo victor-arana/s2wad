@@ -1,17 +1,16 @@
 package com.packt.s2wad.ch14.actions.recipes;
 
+import com.opensymphony.xwork2.ActionSupport;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 
-import com.opensymphony.xwork2.ActionSupport;
 import com.packt.s2wad.ch14.models.Recipe;
 import com.packt.s2wad.ch14.services.RecipeService;
-import com.packt.s2wad.ch14.services.FakeRecipeService;
 
 public class ShowAction extends ActionSupport {
 
     private Recipe recipe;
-    private RecipeService recipeService = new FakeRecipeService();
+    private RecipeService recipeService;
     private static final Log LOG = LogFactory.getLog(ShowAction.class);
 
     @Override
@@ -30,10 +29,6 @@ public class ShowAction extends ActionSupport {
 
     public void setRecipe(Recipe recipe) {
         this.recipe = recipe;
-    }
-
-    public RecipeService getRecipeService() {
-        return recipeService;
     }
 
     public void setRecipeService(RecipeService recipeService) {

@@ -1,27 +1,25 @@
 package com.packt.s2wad.ch14.actions.recipes;
 
-import java.util.Collection;
 import java.util.ArrayList;
+import java.util.Collection;
 
 import com.opensymphony.xwork2.ActionSupport;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 
+import com.packt.s2wad.ch14.models.Ingredient;
 import com.packt.s2wad.ch14.models.Recipe;
 import com.packt.s2wad.ch14.models.RecipeIngredient;
-import com.packt.s2wad.ch14.models.Ingredient;
-import com.packt.s2wad.ch14.services.RecipeService;
-import com.packt.s2wad.ch14.services.FakeRecipeService;
 import com.packt.s2wad.ch14.services.IngredientService;
-import com.packt.s2wad.ch14.services.FakeIngredientService;
+import com.packt.s2wad.ch14.services.RecipeService;
 
 public class RecipesWithIngredientAction extends ActionSupport {
 
     private Long ingredientId;
     private Ingredient ingredient;
     Collection<Recipe> recipes;
-    RecipeService recipeService = new FakeRecipeService();
-    IngredientService ingredientService = new FakeIngredientService();
+    RecipeService recipeService;
+    IngredientService ingredientService;
 
     private static final Log LOG = LogFactory.getLog(RecipesWithIngredientAction.class);
 
@@ -52,6 +50,14 @@ public class RecipesWithIngredientAction extends ActionSupport {
 
     public Ingredient getIngredient() {
         return ingredient;
+    }
+
+    public void setIngredientService(IngredientService ingredientService) {
+        this.ingredientService = ingredientService;
+    }
+
+    public void setRecipeService(RecipeService recipeService) {
+        this.recipeService = recipeService;
     }
 
 }

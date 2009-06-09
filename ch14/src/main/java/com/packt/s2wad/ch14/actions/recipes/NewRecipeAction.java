@@ -4,15 +4,15 @@ import java.util.Collection;
 
 import com.opensymphony.xwork2.ActionSupport;
 import com.opensymphony.xwork2.Preparable;
-import com.packt.s2wad.ch14.models.Recipe;
-import com.packt.s2wad.ch14.models.RecipeType;
-import com.packt.s2wad.ch14.services.FakeRecipeTypeService;
-import com.packt.s2wad.ch14.services.RecipeTypeService;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.apache.struts2.convention.annotation.Action;
 import org.apache.struts2.convention.annotation.Result;
 import org.apache.struts2.convention.annotation.Results;
+
+import com.packt.s2wad.ch14.models.Recipe;
+import com.packt.s2wad.ch14.models.RecipeType;
+import com.packt.s2wad.ch14.services.RecipeTypeService;
 
 @Results({
         @Result(name = ActionSupport.INPUT,
@@ -25,7 +25,7 @@ public class NewRecipeAction extends ActionSupport implements Preparable {
     private Recipe recipe;
     private Collection<RecipeType> recipeTypeOptions;
 
-    private static RecipeTypeService recipeTypeService = new FakeRecipeTypeService();
+    private RecipeTypeService recipeTypeService;
 
     private static final Log LOG = LogFactory.getLog(NewRecipeAction.class);
 
@@ -62,4 +62,8 @@ public class NewRecipeAction extends ActionSupport implements Preparable {
         this.recipe = recipe;
     }
 
+    public void setRecipeTypeService(RecipeTypeService recipeTypeService) {
+        this.recipeTypeService = recipeTypeService;
+    }
+    
 }
