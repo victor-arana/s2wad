@@ -1,8 +1,8 @@
-package com.packt.s2wad.ch13.services;
+package com.packt.s2wad.ch14.services;
 
 import java.util.Collection;
 
-import com.packt.s2wad.ch13.models.Recipe;
+import com.packt.s2wad.ch14.models.Recipe;
 
 public interface RecipeService {
 

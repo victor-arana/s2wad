@@ -1,4 +1,4 @@
-package com.packt.s2wad.ch13.actions.examples;
+package com.packt.s2wad.ch14.actions.examples;
 
 import com.opensymphony.xwork2.ActionSupport;
 import org.apache.struts2.convention.annotation.Result;
