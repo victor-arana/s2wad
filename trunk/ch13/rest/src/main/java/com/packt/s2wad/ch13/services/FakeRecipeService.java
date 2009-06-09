@@ -23,17 +23,17 @@ public class FakeRecipeService implements RecipeService {
                 .addRecipeTypes(Arrays.asList(RECIPE_TYPE_APPETIZER, RECIPE_TYPE_SIDE)));
 
         put(2, new Recipe(2, "Water and Oil", "Some water and oil", "Mix it all up and cook!")
-                .addRecipeIngredient(new RecipeIngredient(1L, 1, "2 T", ingredientService.findById(4L)))
-                .addRecipeIngredient(new RecipeIngredient(2L, 2, "2 c", ingredientService.findById(6L)))
+                .addRecipeIngredient(new RecipeIngredient(4L, 1, "2 T", ingredientService.findById(4L)))
+                .addRecipeIngredient(new RecipeIngredient(5L, 2, "2 c", ingredientService.findById(6L)))
                 .addRecipeTypes(Arrays.asList(RECIPE_TYPE_APPETIZER, RECIPE_TYPE_SIDE)));
 
         put(3, new Recipe(3, "Oil and Vinegar", "Some vinegar and oil", "Mix it all up and cook!")
-                .addRecipeIngredient(new RecipeIngredient(1L, 1, "2 T", ingredientService.findById(4L)))
-                .addRecipeIngredient(new RecipeIngredient(2L, 2, "2 T", ingredientService.findById(5L)))
+                .addRecipeIngredient(new RecipeIngredient(6L, 1, "2 T", ingredientService.findById(4L)))
+                .addRecipeIngredient(new RecipeIngredient(7L, 2, "2 T", ingredientService.findById(5L)))
                 .addRecipeTypes(Arrays.asList(RECIPE_TYPE_APPETIZER, RECIPE_TYPE_SIDE)));
 
         put(4, new Recipe(4, "Tomato Soup", "Soup. From tomatoes.", "Mix it all up and cook!")
-                .addRecipeIngredient(new RecipeIngredient(1L, 1, "2", ingredientService.findById(10L)))
+                .addRecipeIngredient(new RecipeIngredient(8L, 1, "2", ingredientService.findById(10L)))
                 .addRecipeTypes(Arrays.asList(RECIPE_TYPE_APPETIZER, RECIPE_TYPE_SIDE)));
     }};
 
