@@ -12,7 +12,7 @@ public class ShowAction extends ActionSupport {
 
     private Long ingredientId;
     private Ingredient ingredient;
-    private IngredientService ingredientService = new FakeIngredientService();
+    private IngredientService ingredientService;
 
     private static final Log LOG = LogFactory.getLog(ShowAction.class);
 
@@ -39,4 +39,9 @@ public class ShowAction extends ActionSupport {
     public void setIngredient(Ingredient ingredient) {
         this.ingredient = ingredient;
     }
+
+    public void setIngredientService(IngredientService ingredientService) {
+        this.ingredientService = ingredientService;
+    }
+    
 }

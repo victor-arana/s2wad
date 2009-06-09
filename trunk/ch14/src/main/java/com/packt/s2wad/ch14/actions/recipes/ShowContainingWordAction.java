@@ -6,11 +6,10 @@ import java.util.Collection;
 import com.opensymphony.xwork2.ActionSupport;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
-import org.apache.struts2.convention.annotation.Result;
 import org.apache.struts2.convention.annotation.Action;
+import org.apache.struts2.convention.annotation.Result;
 
 import com.packt.s2wad.ch14.models.Recipe;
-import com.packt.s2wad.ch14.services.FakeRecipeService;
 import com.packt.s2wad.ch14.services.RecipeService;
 
 @Result(name = ActionSupport.INPUT, location = "/WEB-INF/content/recipes/show-containing-word-input.jsp")
@@ -18,7 +17,7 @@ public class ShowContainingWordAction extends ActionSupport {
 
     private String recipeWord;
     Collection<Recipe> recipes;
-    RecipeService recipeService = new FakeRecipeService();
+    RecipeService recipeService;
 
     private static final Log LOG = LogFactory.getLog(ShowContainingWordAction.class);
 
@@ -53,4 +52,8 @@ public class ShowContainingWordAction extends ActionSupport {
         return recipeWord;
     }
 
+    public void setRecipeService(RecipeService recipeService) {
+        this.recipeService = recipeService;
+    }
+    
 }
