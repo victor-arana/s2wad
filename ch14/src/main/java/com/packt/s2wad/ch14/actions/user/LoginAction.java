@@ -12,7 +12,8 @@ import org.apache.struts2.convention.annotation.Results;
         @Result(name = ActionSupport.INPUT,
                 location = "/WEB-INF/content/user/login.jsp"),
         @Result(name = ActionSupport.SUCCESS,
-                location = "/WEB-INF/content/user/login.jsp")
+                type = "redirectAction",
+                params = { "actionName", "home", "namespace", "/" })
 })
 public class LoginAction extends ActionSupport {
 
@@ -31,6 +32,10 @@ public class LoginAction extends ActionSupport {
     @Action(value = "login-process")
     public String process() {
         LOG.debug("Enter.");
+        if (email.equals("nologin")) {
+            addActionError("Login failed");
+            return INPUT;
+        }
         return SUCCESS;
     }
 
