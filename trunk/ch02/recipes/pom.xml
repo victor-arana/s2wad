@@ -6,10 +6,10 @@
                              
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.packt.s2wad.ch02.recipes</groupId>
-  <artifactId>recipes</artifactId>
+  <artifactId>ch02-recipes</artifactId>
   <version>1.0</version>
   <packaging>war</packaging>
-  <name>Packt Struts 2 Web Application Development Archetype</name>
+  <name>Packt Struts 2 Web Application Development - Chapter 02 - RecipeBox</name>
 
   <dependencies>
     <dependency>

@@ -6,10 +6,10 @@
 
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.packt.s2wad.ch13</groupId>
-  <artifactId>ch13</artifactId>
+  <artifactId>ch13-dojo</artifactId>
   <version>1.0</version>
   <packaging>war</packaging>
-  <name>Packt Struts 2 Web Application Development - Chapter 13</name>
+  <name>Packt Struts 2 Web Application Development - Chapter 13 - Dojo</name>
 
   <dependencies>
     <dependency>

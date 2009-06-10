@@ -9,7 +9,7 @@
   <artifactId>ch04</artifactId>
   <version>1.0</version>
   <packaging>war</packaging>
-  <name>Packt Struts 2 Web Application Development Archetype</name>
+  <name>Packt Struts 2 Web Application Development - Chapter 04</name>
 
   <dependencies>
     <dependency>
