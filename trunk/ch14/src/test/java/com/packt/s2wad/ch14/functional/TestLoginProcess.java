@@ -53,7 +53,38 @@ public class TestLoginProcess {
         assertUrlEndsWith("/login-process");
         assertElementPresent("an error message span", "css=span[class~='errorMessage']");
         String text = selenium.getText("css=span[class~='errorMessage']");
-        assertTrue(text.equals("Email is required"));
+        assertTrue(text.contains("Email is required"));
+    }
+
+    @Test
+    public void testFailedLogin() {
+        testLoginFormFieldsPresent();
+
+        selenium.typeKeys("id=login_process_email", "nologin");
+        selenium.typeKeys("id=login_process_password", "ohai");
+
+        selenium.click("//input[@value='Login']");
+        selenium.waitForPageToLoad("10000");
+
+        // Should not have moved to /home
+        assertUrlEndsWith("/login-process");
+        assertElementPresent("flash div", "css=div[id=flash][class~='error']");
+        String text = selenium.getText("css=div[id=flash][class~='error']");
+        assertTrue(text.contains("Login failed"));
+    }
+
+    @Test
+    public void testLoginOkay() {
+        testLoginFormFieldsPresent();
+
+        selenium.typeKeys("id=login_process_email", "kthxbai");
+        selenium.typeKeys("id=login_process_password", "ohai");
+
+        selenium.click("//input[@value='Login']");
+        selenium.waitForPageToLoad("10000");
+
+        // Should not have moved to /home
+        assertUrlEndsWith("/home");
     }
 
     private void assertUrlEndsWith(String s) {

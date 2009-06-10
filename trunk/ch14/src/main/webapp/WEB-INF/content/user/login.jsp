@@ -9,6 +9,12 @@
   <body>
     <h1>Login</h1>
 
+    <s:if test="hasActionErrors()">
+      <div id="flash" class="error">
+        <s:actionerror/>
+      </div>
+    </s:if>
+
     <s:form action="login-process">
       <s:textfield name="email" label="Email"/>
       <s:password name="password" label="Password"/>
