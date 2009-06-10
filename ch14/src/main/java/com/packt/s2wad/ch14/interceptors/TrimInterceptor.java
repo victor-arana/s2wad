@@ -4,8 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
-import com.opensymphony.xwork2.interceptor.MethodFilterInterceptor;
 import com.opensymphony.xwork2.ActionInvocation;
+import com.opensymphony.xwork2.interceptor.MethodFilterInterceptor;
 import org.apache.commons.lang.StringUtils;
 
 public class TrimInterceptor extends MethodFilterInterceptor {
@@ -35,6 +35,10 @@ public class TrimInterceptor extends MethodFilterInterceptor {
         }
 
         return true;
+    }
+
+    public boolean isExcluded(String param) {
+        return !isIncluded(param);
     }
 
     public void setExcludedParams(String excludedParams) {
