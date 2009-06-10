@@ -86,6 +86,12 @@
       <version>1.7</version>
     </dependency>
 
+    <dependency>
+      <groupId>com.thoughtworks</groupId>
+      <artifactId>selenium-java-client-driver</artifactId>
+      <version>1.0</version>
+    </dependency>
+
     <!--
 
         <dependency>
