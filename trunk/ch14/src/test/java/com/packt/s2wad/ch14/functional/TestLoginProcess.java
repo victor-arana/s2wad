@@ -39,4 +39,25 @@ public class TestLoginProcess {
         assertElementPresent("Login button", "//input[@value='Login']");
     }
 
+    @Test
+    public void testEmailValidation() {
+        testLoginFormFieldsPresent();
+
+        selenium.typeKeys("id=login_process_email", " ");
+        selenium.typeKeys("id=login_process_password", "ohai");
+
+        selenium.click("//input[@value='Login']");
+        selenium.waitForPageToLoad("10000");
+
+        // Should not have moved to /home
+        assertUrlEndsWith("/login-process");
+        assertElementPresent("an error message span", "css=span[class~='errorMessage']");
+        String text = selenium.getText("css=span[class~='errorMessage']");
+        assertTrue(text.equals("Email is required"));
+    }
+
+    private void assertUrlEndsWith(String s) {
+        assertTrue(selenium.getLocation().endsWith(s));
+    }
+
 }
