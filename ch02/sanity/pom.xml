@@ -6,13 +6,11 @@
                              
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.packt.s2wad.ch02.sanity</groupId>
-  <artifactId>sanity</artifactId>
+  <artifactId>ch02-sanity</artifactId>
   <version>1.0</version>
   <packaging>war</packaging>
   
-  <name>
-    Packt Struts 2 Web Application Development - Chapter 2 - Sanity Check Application
-  </name>
+  <name>Packt Struts 2 Web Application Development - Chapter 2 - Sanity Check Application</name>
 
   <dependencies>
     <dependency>

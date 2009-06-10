@@ -6,7 +6,7 @@
                              
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.packt.s2wad.ch02.convention</groupId>
-  <artifactId>convention</artifactId>
+  <artifactId>ch02-convention</artifactId>
   <version>1.0</version>
   <packaging>war</packaging>
   <name>Packt Struts 2 Web Application Development - Chapter 02 - Convention Plugin Examples</name>
