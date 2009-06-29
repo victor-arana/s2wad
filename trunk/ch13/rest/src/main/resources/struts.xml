@@ -3,10 +3,26 @@
     "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN"
     "http://struts.apache.org/dtds/struts-2.1.dtd">
 <struts>
-  <constant name="struts.devMode" value="true" />
-  <constant name="struts.enable.DynamicMethodInvocation" value="false" />
+    <constant name="struts.devMode" value="true"/>
+    <constant name="struts.enable.DynamicMethodInvocation" value="false"/>
 
-  <bean name="yaml" type="org.apache.struts2.rest.handler.ContentTypeHandler" class="com.packt.s2wad.ch13.yaml.YamlHandler"/>
-  <constant name="struts.rest.handlerOverride.yaml" value="yaml"/>
-  <constant name="struts.action.extension" value="xhtml,,xml,json,yaml"/>
+    <bean name="yaml" type="org.apache.struts2.rest.handler.ContentTypeHandler" class="com.packt.s2wad.ch13.yaml.YamlHandler"/>
+
+    <!--<bean type="org.apache.struts2.dispatcher.mapper.ActionMapper" name="struts" class="org.apache.struts2.dispatcher.mapper.CompositeActionMapper"/>-->
+    <!--<constant name="struts.mapper.composite" value="org.apache.struts2.dispatcher.mapper.DefaultActionMapper,org.apache.struts2.rest.RestActionMapper"/>-->
+
+    <constant name="struts.rest.handlerOverride.yaml" value="yaml"/>
+    <constant name="struts.action.extension" value="action,xhtml,,xml,json,yaml"/>
+    <constant name="struts.convention.exclude.packages" value="com.packt.s2wad.ch13.misc.*"/>
+    <constant name="struts.convention.action.mapAllMatches" value="false"/>
+    <constant name="struts.convention.action.disableScanning" value="true"/>
+    <constant name="struts.convention.action.packages" value="com.packt.s2wad.ch13.actions.*"/>
+    <constant name="struts.convention.package.locators" value="com.packt.s2wad.ch13.actions.*"/>
+
+
+    <package name="foo" namespace="/foo" extends="struts-default">
+        <action name="foo1" class="com.packt.s2wad.ch13.misc.Foo">
+            <result>/WEB-INF/foo.jsp</result>
+        </action>
+    </package>
 </struts>
