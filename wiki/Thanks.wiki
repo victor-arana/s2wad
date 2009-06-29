@@ -1,0 +1,4 @@
+#summary Miscellaneous Thank-yous
+#labels thanks
+
+  * Bruce Phillips ([http://www.brucephillips.name/ site], [http://www.brucephillips.name/blog/ blog]) for pointing out that my POMs are not the ones I thought they were, and spurring me on to make the parent POM and figure out Jetty enough to get the welcome pages working.
