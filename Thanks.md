@@ -1,0 +1,1 @@
+  * Bruce Phillips ([site](http://www.brucephillips.name/), [blog](http://www.brucephillips.name/blog/)) for pointing out that my POMs are not the ones I thought they were, and spurring me on to make the parent POM and figure out Jetty enough to get the welcome pages working.
